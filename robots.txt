@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://reidentity.net/sitemap.xml

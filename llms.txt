@@ -1,0 +1,8 @@
+# reID (reidentity.net)
+> reID is a digital identity passport: one verified account to sign in, verify, pay, share and earn.
+
+- Personal: passkey/wallet/social sign-in, passport verification, cash + crypto wallet, username transfers (name@reid), QR contact sharing, 10-level legacy network.
+- reCorporate (corporate.reidentity.net, desktop): corporate identity, employees, roles & permissions, approvals, salaries, fiat and crypto accounts, employee cashback, API keys.
+- Sign in with reID: OAuth 2.0 / OpenID Connect, npm SDK.
+- Ambassador Program: apply in the reID app → Academy → test → approval → Ambassador portal and storefront → commissions.
+- Web app: https://app.reidentity.net · Contact: info@reidentity.net · Part of ReSystem (resystem.org).

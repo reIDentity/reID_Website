@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>reID</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="reID is one verified identity to sign in, pay, share and earn — for people, businesses and partners. Includes reCorporate, Sign in with reID and the Ambassador Program.">
+<link rel="canonical" href="https://reidentity.net/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://reidentity.net/">
+<meta property="og:title" content="reID — One identity for everything">
+<meta property="og:description" content="Sign in, verify, pay and earn with one secure identity across crypto and traditional platforms.">
+<meta property="og:image" content="https://reidentity.net/assets/img/hero-phone.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Reidentity_net">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"reID","url":"https://reidentity.net","applicationCategory":"FinanceApplication","operatingSystem":"iOS, Android, Web","description":"One verified digital identity to sign in, pay, share and earn.","publisher":{"@type":"Organization","name":"ReSystem","url":"https://resystem.org"}}</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="reID home"><img src="assets/logo-mark-text.svg" alt="reID" width="100" height="30"></a>
+    <nav class="links" aria-label="Main">
+      <a href="#personal">Personal</a>
+      <a href="#legacy">Legacy</a>
+      <a href="#wallet">Wallet</a>
+      <a href="#sso">Sign in with reID</a>
+      <a href="#corporate">reCorporate</a>
+      <a href="#ambassador">Ambassador</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-blue sm" href="https://app.reidentity.net" target="_blank" rel="noopener">Get your reID</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+<nav class="menu" id="menu" aria-label="Mobile">
+  <a href="#personal">Personal</a><a href="#legacy">Legacy network</a><a href="#wallet">Wallet</a><a href="#sso">Sign in with reID</a><a href="#corporate">reCorporate</a><a href="#ambassador">Ambassador</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+  <a class="btn btn-blue" href="https://app.reidentity.net" target="_blank" rel="noopener">Get your reID</a>
+</nav>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="canvas">
+        <img class="paint" src="assets/img/hero-phone.webp" alt="Oil painting of a person holding a smartphone close to their chest" fetchpriority="high">
+        <span class="logo-chip"><img src="assets/logo-mark-text.svg" alt="reID"></span>
+        <div class="hero-copy">
+          <span class="tag">Your digital identity passport</span>
+          <h1>One identity for everything.</h1>
+          <p>A single, simple ID to sign in, verify, pay and earn — across apps, money and the people you know.</p>
+          <div class="row">
+            <a class="btn btn-blue" href="https://app.reidentity.net" target="_blank" rel="noopener">Create your reID</a>
+            <a class="btn btn-glass" href="#corporate">For businesses</a>
+          </div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="qr-card">
+          <img src="assets/qr-app.svg" alt="QR code linking to app.reidentity.net" width="250" height="250">
+          <b>Scan to join reID</b>
+        </div>
+        <div class="phone-card">
+          <h4>Crypto wallet and fiat cash, built on regulation.</h4>
+          <p>Your crypto. Your cash. Your control.</p>
+          <div class="scr"><img src="assets/img/scr-wallet.webp" alt="reID wallet screen showing total balance and recent transactions"></div>
+        </div>
+      </div>
+    </div>
+    <div class="strip">
+      <span><svg class="ic"><use href="assets/sprite.svg#i-passkey"/></svg>Passkey sign-in</span>
+      <span><svg class="ic"><use href="assets/sprite.svg#i-passport"/></svg>Passport verification</span>
+      <span><svg class="ic"><use href="assets/sprite.svg#i-wallet"/></svg>Cash + crypto wallet</span>
+      <span><svg class="ic"><use href="assets/sprite.svg#i-legacy"/></svg>10-level legacy network</span>
+      <span><svg class="ic"><use href="assets/sprite.svg#i-phone"/></svg>iOS · Android · Web</span>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-t" id="mq">
+  <span><svg class="ic"><use href="assets/sprite.svg#i-key"/></svg>Sign in</span><span>Verify once</span>
+  <span><svg class="ic"><use href="assets/sprite.svg#i-wallet"/></svg>Pay anyone</span><span>Share your profile</span>
+  <span><svg class="ic"><use href="assets/sprite.svg#i-rewards"/></svg>Earn cashback</span><span>Grow your legacy</span>
+  <span><svg class="ic"><use href="assets/sprite.svg#i-users-group"/></svg>Run your team</span><span>Connect every app</span>
+</div></div>
+
+<!-- PERSONAL: APP TOUR -->
+<section class="sec" id="personal">
+  <div class="wrap tour">
+    <div>
+      <div class="sec-head">
+        <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-identity"/></svg>reID Personal</span>
+        <h2>No passwords. No forms. No hassle.</h2>
+        <p class="lead">Everything you do online starts with who you are. reID keeps that in one secure place and lets you use it everywhere.</p>
+      </div>
+      <div class="tour-list" role="tablist" aria-label="reID app tour">
+        <button class="tour-item" role="tab" aria-selected="true" data-screen="0" id="tour-0">
+          <span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-passkey"/></svg></span>
+          <span><h4>Sign in with one tap</h4><p>Use a passkey and your device's biometrics, your wallet, or a social account.</p></span>
+        </button>
+        <button class="tour-item" role="tab" aria-selected="false" data-screen="1" id="tour-1">
+          <span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-wallet"/></svg></span>
+          <span><h4>Hold cash and crypto together</h4><p>Track your reID balance, buy, send and see every transaction in one wallet.</p></span>
+        </button>
+        <button class="tour-item" role="tab" aria-selected="false" data-screen="2" id="tour-2">
+          <span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-settings"/></svg></span>
+          <span><h4>Decide who sees what</h4><p>Manage connected apps, data sharing, verification status and passkeys from settings.</p></span>
+        </button>
+      </div>
+    </div>
+    <div class="device-stage">
+      <div class="pop a"><svg class="ic l"><use href="assets/sprite.svg#i-verified"/></svg><span><b>Identity verified</b>Limits lifted</span></div>
+      <div class="device"><span class="notch"></span><div class="glass">
+        <img class="on" src="assets/img/scr-login.webp" alt="reID login screen with passkey, wallet and social options">
+        <img src="assets/img/scr-wallet.webp" alt="reID wallet screen">
+        <img src="assets/img/scr-settings.webp" alt="reID settings screen with connected apps and data sharing">
+      </div></div>
+      <div class="pop b"><svg class="ic l"><use href="assets/sprite.svg#i-rewards"/></svg><span><b>Cashback earned</b>Claim your reward</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EARNING PASSPORT BENTO -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-rewards"/></svg>More than an ID</span>
+      <h2>It's your earning passport.</h2>
+      <p class="lead">Unlock apps, money and rewards. reID carries your identity across the digital world and pays you for using it.</p>
+    </div>
+    <div class="bento">
+      <article class="tile art c5 r3">
+        <img src="assets/img/family.webp" alt="Painting of a parent lifting a child in a sunlit meadow" loading="lazy">
+        <svg class="icon"><use href="assets/sprite.svg#i-virtual-id"/></svg>
+        <h3>Virtual ID privacy for you and your family</h3>
+        <p>One reID generates virtual phone numbers and debit cards for you and your family. Set spending limits, approve OTPs and manage permissions from one dashboard. Your real identity is never exposed.</p>
+      </article>
+      <article class="tile art top c7 r2">
+        <img src="assets/img/apps.webp" alt="Painting of app icons swirling in colour" loading="lazy">
+        <h3>Connect once, access everywhere</h3>
+        <p>One-tap single sign-on links you to every ReSystem and partner app without repeated logins or KYC.</p>
+      </article>
+      <article class="tile c4">
+        <svg class="icon"><use href="assets/sprite.svg#i-lock"/></svg>
+        <h3>Privacy by default</h3>
+        <p class="small">Share only what's needed. Zero-knowledge verification and encryption protect your data.</p>
+      </article>
+      <article class="tile blue c3">
+        <svg class="icon"><use href="assets/sprite.svg#i-qr-code"/></svg>
+        <h3>Contact sharing</h3>
+        <p class="small">Share your verified profile by QR with people and businesses.</p>
+      </article>
+      <article class="tile c7 r2" style="padding-right:48%">
+        <svg class="icon"><use href="assets/sprite.svg#i-location"/></svg>
+        <h3>One ID, global access</h3>
+        <p>Your reID works across countries, platforms and industries: crypto, fintech, e-commerce and beyond.</p>
+        <img class="phone-mini" src="assets/img/scr-login.webp" alt="" loading="lazy">
+      </article>
+      <article class="tile art c5 r2">
+        <img src="assets/img/coins.webp" alt="Painting of gold coins falling through dark space" loading="lazy">
+        <svg class="icon"><use href="assets/sprite.svg#i-rewards"/></svg>
+        <h3>Rewards-first identity</h3>
+        <p>Earn tokens, cashback and commissions just by using your identity to access apps and services.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VERIFY -->
+<section class="sec" style="padding-top:0" id="verify">
+  <div class="wrap split">
+    <div class="frame" style="aspect-ratio:4/3.4">
+      <img src="assets/img/verify-grass.webp" alt="Painting of a hand reaching up, reflected in a round mirror among tall grass" loading="lazy">
+      <div class="idcard">
+        <img class="av" src="assets/img/corp-alex.webp" alt="">
+        <div><small>reID</small><b>alex@reid</b><small>Dubai, UAE</small></div>
+        <svg class="ic xl vf"><use href="assets/sprite.svg#i-verified"/></svg>
+      </div>
+    </div>
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-verify-guard"/></svg>Verification</span>
+        <h2>Get verified once. Use it in every app.</h2>
+        <p class="lead">Choose the check that suits you to lift all limits. Your verified status travels with your reID, so you never repeat KYC for a connected app.</p>
+      </div>
+      <div class="checks">
+        <div class="check"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-passport"/></svg></span><div><h4>Scan your passport</h4><p>Fast document and liveness checks, handled by a regulated KYC provider.</p></div></div>
+        <div class="check"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-key"/></svg></span><div><h4>Stake tokens</h4><p>Prefer a lighter route? Staking unlocks higher limits too.</p></div></div>
+        <div class="check"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-user-id"/></svg></span><div><h4>Share proof, not documents</h4><p>Apps receive a verified yes or no, not your passport.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGACY -->
+<section class="sec legacy" id="legacy">
+  <div class="wrap legacy-grid">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-legacy"/></svg>Legacy network</span>
+        <h2>Invite friends. Earn from your network, forever.</h2>
+        <p class="lead">Every person who joins with your QR becomes part of your legacy. A share of every transaction your network makes flows back to you, across up to 10 levels. As your network grows, your earnings compound.</p>
+      </div>
+      <div class="levels" id="levels" role="group" aria-label="Network levels"></div>
+      <div class="lv-note" aria-live="polite"><b id="lvTitle">Level 1 · Your direct invites</b><span id="lvText">People who scan your QR and join reID.</span></div>
+      <div class="loop" aria-label="How the loop works">
+        <span><svg class="ic s"><use href="assets/sprite.svg#i-qr-code"/></svg>Share your QR</span><i>→</i>
+        <span><svg class="ic s"><use href="assets/sprite.svg#i-users-plus"/></svg>They join</span><i>→</i>
+        <span><svg class="ic s"><use href="assets/sprite.svg#i-wallet"/></svg>They transact</span><i>→</i>
+        <span><svg class="ic s"><use href="assets/sprite.svg#i-rewards"/></svg>You earn</span>
+      </div>
+    </div>
+    <div class="net" id="net">
+      <canvas id="netCanvas" width="1120" height="1120" aria-label="Diagram of a legacy network spreading out in rings from you"></canvas>
+      <div class="net-center"><svg class="ic" style="color:#fff"><use href="assets/sprite.svg#i-user"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- WALLET -->
+<section class="sec" id="wallet">
+  <div class="wrap split">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-wallet"/></svg>Built-in wallet</span>
+        <h2>Send money to a name, not an address.</h2>
+        <p class="lead">Your reID wallet holds cash and crypto side by side. Pay any reID user by their username, and receive cashback and network earnings in the same place.</p>
+      </div>
+      <div style="margin-top:28px" class="row"><span class="handle"><svg class="ic s"><use href="assets/sprite.svg#i-arrow-right"/></svg>sam@reid</span><span class="mute" style="font-size:15px">instead of 0x21F9…dhyhki</span></div>
+      <div class="feat-list">
+        <div><svg class="ic"><use href="assets/sprite.svg#i-cash"/></svg>Fiat cash with regulated rails</div>
+        <div><svg class="ic"><use href="assets/sprite.svg#i-bitcoin"/></svg>Crypto alongside your cash</div>
+        <div><svg class="ic"><use href="assets/sprite.svg#i-swap"/></svg>Swap between supported assets</div>
+        <div><svg class="ic"><use href="assets/sprite.svg#i-credit-card"/></svg>Virtual cards, coming soon</div>
+      </div>
+    </div>
+    <div class="wallet-card">
+      <img class="coins-img" src="assets/img/coins.webp" alt="" loading="lazy">
+      <div class="device"><span class="notch"></span><div class="glass"><img class="on" src="assets/img/scr-wallet.webp" alt="reID wallet with a total balance of 2,012 dollars" loading="lazy"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SSO -->
+<section class="sec" style="padding-top:0" id="sso">
+  <div class="wrap">
+    <div class="sso">
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-key"/></svg>Sign in with reID</span>
+          <h2>Never re-type a password again.</h2>
+          <p class="lead">Add one button to your app. Users sign in with a verified identity, approve what they share, and skip sign-up forms and repeat KYC.</p>
+        </div>
+        <div class="code" id="code"><button class="copy" type="button" id="copyCode">Copy</button><span class="c">// Standard OpenID Connect — works with the reID SDK or any OIDC client</span>
+<span class="k">const</span> reid = <span class="k">await</span> Issuer.discover(process.env.REID_ISSUER);
+<span class="k">const</span> client = <span class="k">new</span> reid.Client({
+  client_id: process.env.REID_CLIENT_ID,
+  redirect_uris: [<span class="s">'https://yourapp.com/auth/reid'</span>],
+});
+<span class="k">const</span> url = client.authorizationUrl({ scope: <span class="s">'openid profile email verification'</span> });</div>
+        <div class="sso-points">
+          <div><b>For users</b>One login for every app.</div>
+          <div><b>For businesses</b>Verified customers, less fraud.</div>
+          <div><b>For developers</b>npm SDK and OAuth 2.0.</div>
+        </div>
+      </div>
+      <div class="demo" aria-live="polite">
+        <div class="site" data-step="0">
+          <span class="logo-ph"><svg class="ic l"><use href="assets/sprite.svg#i-real-estate"/></svg></span>
+          <h3>Harbour Homes</h3>
+          <p class="mute">Sign in to save listings and book viewings.</p>
+          <button class="siw" type="button" id="siw"><svg class="ic"><use href="assets/sprite.svg#i-identity"/></svg>Sign in with reID</button>
+          <p class="mute" style="font-size:13px">Example partner app. Try it.</p>
+        </div>
+        <div class="consent" data-step="1" hidden>
+          <div class="who"><img src="assets/img/corp-alex.webp" alt=""><div><b>alex@reid</b><div class="mute" style="font-size:14px">Harbour Homes would like:</div></div></div>
+          <div class="scope">Name and photo<svg class="ic s"><use href="assets/sprite.svg#i-verified"/></svg></div>
+          <div class="scope">Verified identity status<svg class="ic s"><use href="assets/sprite.svg#i-verified"/></svg></div>
+          <div class="scope">Email address<svg class="ic s"><use href="assets/sprite.svg#i-verified"/></svg></div>
+          <div class="row" style="margin-top:6px"><button class="btn btn-line sm" type="button" id="deny">Cancel</button><button class="btn btn-blue sm" type="button" id="allow"><svg class="ic"><use href="assets/sprite.svg#i-passkey"/></svg>Allow with passkey</button></div>
+        </div>
+        <div class="done" data-step="2" hidden>
+          <span class="ok"><svg class="ic l"><use href="assets/sprite.svg#i-verified"/></svg></span>
+          <h3>Signed in as Alex</h3>
+          <p class="mute">Verified, with no password and no forms.</p>
+          <button class="btn btn-line sm" type="button" id="again"><svg class="ic"><use href="assets/sprite.svg#i-refresh-reload"/></svg>Run again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORPORATE -->
+<section class="sec" style="padding-top:0" id="corporate">
+  <div class="wrap">
+    <div class="corp-banner">
+      <img src="assets/img/corp-hero.webp" alt="Painting of hands typing on a laptop" loading="lazy">
+      <div>
+        <span class="logo-chip" style="position:static;display:inline-flex;margin-bottom:22px"><img src="assets/icons/reid-corporate.svg" alt="">reCorporate</span>
+        <h2>The financial and workforce operating layer for modern businesses.</h2>
+        <p>Identity, employees, permissions, salaries, payments and fiat and crypto accounts. One corporate account replaces the disconnected systems you run today.</p>
+        <div class="row"><a class="btn btn-blue" href="https://corporate.reidentity.net" target="_blank" rel="noopener">Open a corporate account</a><a class="btn btn-glass" href="#contact">Book a demo</a></div>
+      </div>
+    </div>
+
+    <div class="showcase">
+      <div class="sc-tabs" role="tablist" aria-label="reCorporate product tour">
+        <button class="sc-tab" role="tab" aria-selected="true" data-sc="0"><svg class="ic"><use href="assets/sprite.svg#i-home"/></svg>Dashboard</button>
+        <button class="sc-tab" role="tab" aria-selected="false" data-sc="1"><svg class="ic"><use href="assets/sprite.svg#i-lock"/></svg>Permissions</button>
+        <button class="sc-tab" role="tab" aria-selected="false" data-sc="2"><svg class="ic"><use href="assets/sprite.svg#i-users-check"/></svg>Roles</button>
+        <button class="sc-tab" role="tab" aria-selected="false" data-sc="3"><svg class="ic"><use href="assets/sprite.svg#i-users-plus"/></svg>Users</button>
+        <button class="sc-tab" role="tab" aria-selected="false" data-sc="4"><svg class="ic"><use href="assets/sprite.svg#i-cash"/></svg>Fiat account</button>
+        <button class="sc-tab" role="tab" aria-selected="false" data-sc="5"><svg class="ic"><use href="assets/sprite.svg#i-rewards"/></svg>Employee cashback</button>
+      </div>
+      <div class="sc-stage">
+        <div class="sc-copy">
+          <div data-copy class="on"><h3>One workspace for people, access and money</h3><p>See fiat and crypto balances, swap through INFRA, track your team and claim rewards from one dashboard.</p></div>
+          <div data-copy><h3>Granular access control</h3><p>Give the right people the right access at the right time.</p><ul><li><svg class="ic"><use href="assets/sprite.svg#i-verified"/></svg>Full or view-only access</li><li><svg class="ic"><use href="assets/sprite.svg#i-verified"/></svg>Send and receive payments</li><li><svg class="ic"><use href="assets/sprite.svg#i-verified"/></svg>Manage store and events</li></ul></div>
+          <div data-copy><h3>Roles built from real actions</h3><p>Choose pages, then the actions allowed on each: view, create, update, delete.</p></div>
+          <div data-copy><h3>Invite and manage users</h3><p>Add staff one by one or in bulk, assign a role and set who they report to.</p></div>
+          <div data-copy><h3>Fiat and crypto accounts</h3><p>Manage traditional and digital financial activity side by side, with your own account number and QR for receiving.</p></div>
+          <div data-copy><h3>Beyond payroll</h3><p>Turn salary into an ongoing relationship with cashback, a company store, events and socials.</p></div>
+        </div>
+        <div class="sc-img">
+          <img class="on" src="assets/img/corp-dash.webp" alt="reCorporate dashboard" loading="lazy">
+          <img src="assets/img/corp-perms.webp" alt="Executive-level access permissions list" loading="lazy">
+          <img src="assets/img/corp-role.webp" alt="Create role form" loading="lazy">
+          <img src="assets/img/corp-users.webp" alt="Create users form" loading="lazy">
+          <img src="assets/img/corp-fiat.webp" alt="Fiat account card with AED balance" loading="lazy">
+          <img src="assets/img/corp-cashback.webp" alt="Employee cashback screen" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="vs">
+      <article class="tile"><h3>Today: multiple systems, higher complexity</h3><p>HR in one tool, payroll in another, crypto on an exchange and identity on paper. Every handoff costs time and adds risk.</p>
+        <div class="chaos"><span>HR</span><span>Finance</span><span>Payments</span><span>Crypto</span><span>Employee benefits</span><span>Identity</span></div></article>
+      <article class="tile blue"><h3>With reCorporate: one connected layer</h3><p>One account, one set of permissions and one audit trail across everything your business runs.</p>
+        <div class="chaos"><span>Identity</span><span>Workforce</span><span>Finance</span><span>Digital assets</span><span>Engagement</span></div></article>
+    </div>
+
+    <div class="bento" style="margin-top:16px">
+      <article class="tile ink c4 r2">
+        <svg class="icon"><use href="assets/sprite.svg#i-user-id"/></svg>
+        <h3>One corporate identity</h3>
+        <p>Manage the complete employee lifecycle: profile, KYC, employment, history and corporate ID.</p>
+        <img src="assets/img/corp-alex.webp" alt="" loading="lazy" style="border-radius:16px;margin-top:auto;aspect-ratio:4/3;object-fit:cover;object-position:top">
+      </article>
+      <article class="tile c8" style="background:linear-gradient(120deg,#fff,#EEF7FF)">
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center">
+          <div style="display:grid;gap:10px"><svg class="icon"><use href="assets/sprite.svg#i-cash"/></svg><h3>One financial account</h3><p>Connect corporate activity across fiat, crypto, payments and salaries.</p></div>
+          <img src="assets/img/corp-fincard.webp" alt="Fiat and crypto toggle card with growth chart" loading="lazy">
+        </div>
+      </article>
+      <article class="tile c4"><svg class="icon"><use href="assets/sprite.svg#i-swap"/></svg><h3>INFRA Swap</h3><p class="small">Fiat or crypto → reID account → INFRA Swap → digital assets.</p></article>
+      <article class="tile c4"><svg class="icon"><use href="assets/sprite.svg#i-wallet-connect"/></svg><h3>Built to connect</h3><p class="small">Secure API keys, developer docs and corporate integrations.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="split" style="align-items:start">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-users-group"/></svg>From employee to ecosystem</span>
+        <h2>A continuous relationship beyond employment.</h2>
+        <p class="lead">Salary lands in a reID account, gets spent with partners, earns cashback and brings people back. Engagement through real utility.</p>
+      </div>
+      <img src="assets/img/corp-stack.webp" alt="Layered illustration of reID Corporate modules" loading="lazy" style="max-height:340px;margin-inline:auto">
+    </div>
+    <div class="flow" style="margin-top:40px" aria-label="Employee journey">
+      <div class="node"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-users-plus"/></svg></span><span>Join</span></div><i>›</i>
+      <div class="node"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-identity"/></svg></span><span>Identity</span></div><i>›</i>
+      <div class="node"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-passport"/></svg></span><span>KYC</span></div><i>›</i>
+      <div class="node"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-clipboard-list"/></svg></span><span>Employment</span></div><i>›</i>
+      <div class="node on"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-coin-salary"/></svg></span><span>Salary</span></div><i>›</i>
+      <div class="node"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-credit-card"/></svg></span><span>Payments</span></div><i>›</i>
+      <div class="node"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-rewards"/></svg></span><span>Engagement</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-growth-icon"/></svg>Land, expand, integrate</span>
+      <h2>Start with one account. Add workflows as you grow.</h2>
+      <p class="lead">Enable only what you need today. Each step builds on the one before it.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><h4>Corporate account</h4><p>Create your company profile and business details.</p></div>
+      <div class="step"><span class="n">02</span><h4>KYC and onboarding</h4><p>Verify the business and the people who run it.</p></div>
+      <div class="step"><span class="n">03</span><h4>Employee management</h4><p>Invite staff in bulk and keep records in one place.</p></div>
+      <div class="step"><span class="n">04</span><h4>Roles and permissions</h4><p>Define who can view, approve and send.</p></div>
+      <div class="step"><span class="n">05</span><h4>Salaries and payments</h4><p>Pay teams and suppliers from your own accounts.</p></div>
+      <div class="step"><span class="n">06</span><h4>Fiat + crypto gateway</h4><p>Accept and hold both under one ledger.</p></div>
+      <div class="step"><span class="n">07</span><h4>Cashback integration</h4><p>Reward employees and customers inside the network.</p></div>
+      <div class="step"><span class="n">08</span><h4>Custom API workflows</h4><p>Connect your ERP, CRM and internal tools.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="legal">
+      <div>
+        <div class="sec-head" style="margin-bottom:28px">
+          <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-verify-guard"/></svg>Be ready for digital assets</span>
+          <h2>Define your legal pathway.</h2>
+          <p class="lead">Our legal team assesses your business and intended markets to identify the right jurisdiction, structure and requirements for accepting digital asset payments.</p>
+        </div>
+        <div class="steps" style="grid-template-columns:1fr">
+          <div class="step"><span class="n">01 · Jurisdiction</span><p>Assess where your business can operate.</p></div>
+          <div class="step"><span class="n">02 · Requirements</span><p>Identify the verification and compliance steps you need.</p></div>
+          <div class="step"><span class="n">03 · Activation</span><p>Go live, subject to required approvals and service availability.</p></div>
+        </div>
+        <div class="row" style="margin-top:28px"><a class="btn btn-blue" href="#contact">Request an assessment</a></div>
+      </div>
+      <img class="legal-img" src="assets/img/qr-hand.webp" alt="Hand holding a phone showing the reCorporate QR code" loading="lazy">
+    </div>
+
+    <div class="sec-head" style="margin-top:clamp(72px,9vw,120px)">
+      <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-shop"/></svg>Who it's built for</span>
+      <h2>Any business that touches customers at scale.</h2>
+      <p class="lead">Compliance-ready architecture that adapts to your jurisdiction, with KYC, AML and audit trails built in. Available as a white-label solution.</p>
+    </div>
+    <div class="chips">
+      <span class="chip"><svg class="ic"><use href="assets/sprite.svg#i-real-estate"/></svg>Real estate</span>
+      <span class="chip"><svg class="ic"><use href="assets/sprite.svg#i-shop"/></svg>E-commerce</span>
+      <span class="chip"><svg class="ic"><use href="assets/sprite.svg#i-cash"/></svg>Financial institutions</span>
+      <span class="chip"><svg class="ic"><use href="assets/sprite.svg#i-credit-card"/></svg>Banking</span>
+      <span class="chip"><svg class="ic"><use href="assets/sprite.svg#i-bitcoin"/></svg>Blockchain &amp; Web3</span>
+      <span class="chip"><svg class="ic"><use href="assets/sprite.svg#i-ticket"/></svg>Hospitality</span>
+      <span class="chip"><svg class="ic"><use href="assets/sprite.svg#i-notebook"/></svg>Healthcare</span>
+      <span class="chip"><svg class="ic"><use href="assets/sprite.svg#i-location"/></svg>Logistics</span>
+      <span class="chip"><svg class="ic"><use href="assets/sprite.svg#i-verify-guard"/></svg>Government</span>
+      <span class="chip"><svg class="ic"><use href="assets/sprite.svg#i-marketplace"/></svg>Retail</span>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="sec" style="padding-top:0" id="use-cases">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-star"/></svg>Use cases</span>
+      <h2>Built for the way people actually live online.</h2>
+    </div>
+    <div class="cases">
+      <article class="case"><img src="assets/img/merchant.webp" alt="Painting of a smiling man looking at his phone" loading="lazy"><div><h3>Merchant passport</h3><p>List, sell and buy across real estate, RWA and e-commerce. Verified customers, automatic cashback and one dashboard.</p></div></article>
+      <article class="case"><img src="assets/img/contact.webp" alt="Painting of two people exchanging verified profiles between phones" loading="lazy"><div><h3>Contact sharing</h3><p>Connect only with people and businesses relevant to you. No fake profiles, no cold outreach.</p></div></article>
+      <article class="case"><img src="assets/img/privacy-hands.webp" alt="Painting of hands holding a phone" loading="lazy"><div><h3>Crypto, Web3 and privacy</h3><p>A verified passport for DeFi, DEXs and dApps. Zero-knowledge proofs mean you share only what's needed.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- AMBASSADOR -->
+<section class="sec amb" id="ambassador">
+  <div class="wrap">
+    <div class="amb-hero">
+      <div class="canvas">
+        <img class="paint" src="assets/img/legacy.webp" alt="Painting of a group of friends looking down into the camera, laughing" loading="lazy">
+        <div class="hero-copy">
+          <span class="tag">reID Ambassador Program</span>
+          <h2 style="font-size:clamp(38px,5vw,68px);max-width:12ch">Grow the network. Earn as it grows.</h2>
+          <p>Introduce people and businesses to reID and reCorporate. Get your own storefront, training and live tracking, and a share of the value your network creates.</p>
+          <div class="row"><a class="btn btn-blue" href="https://app.reidentity.net" target="_blank" rel="noopener">Apply in the reID app</a><a class="btn btn-glass" href="#amb-steps">See the process</a></div>
+        </div>
+      </div>
+      <div class="store" aria-label="Sample ambassador storefront">
+        <div class="bar"><i></i><i></i><i></i><span class="url">ambassador.reidentity.net/alex</span></div>
+        <div class="body">
+          <div class="prof"><img src="assets/img/corp-alex.webp" alt=""><div><b style="font-size:18px">Alex R.</b><div class="mute" style="font-size:14px">Certified reID Ambassador · Dubai</div></div><svg class="ic l"><use href="assets/sprite.svg#i-verified"/></svg></div>
+          <div class="prods">
+            <div><svg class="ic"><use href="assets/sprite.svg#i-identity"/></svg><b>reID</b><span class="mute">Personal</span></div>
+            <div><svg class="ic"><use href="assets/sprite.svg#i-users-group"/></svg><b>reCorporate</b><span class="mute">Business</span></div>
+            <div><svg class="ic"><use href="assets/sprite.svg#i-wallet"/></svg><b>reWallet</b><span class="mute">Wallet</span></div>
+          </div>
+          <div class="meters">
+            <div class="meter"><span>Users onboarded</span><i style="--w:72%"></i><b>142</b></div>
+            <div class="meter"><span>Businesses</span><i style="--w:36%"></i><b>9</b></div>
+            <div class="meter"><span>Network depth</span><i style="--w:50%"></i><b>5/10</b></div>
+          </div>
+          <img src="assets/qr-app.svg" alt="" style="width:92px;justify-self:start;background:#fff;padding:8px;border-radius:12px;border:1px solid var(--line)">
+          <span class="ex">Example storefront for illustration.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:clamp(72px,9vw,120px)">
+      <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-dollar-sign"/></svg>Ways to earn</span>
+      <h2>Three income streams from one role.</h2>
+    </div>
+    <div class="earn">
+      <article class="tile"><svg class="icon"><use href="assets/sprite.svg#i-reid-corporate"/></svg><h3>Corporate onboarding</h3><p>Bring businesses onto reCorporate and earn on the accounts and subscriptions you introduce.</p></article>
+      <article class="tile blue"><svg class="icon"><use href="assets/sprite.svg#i-legacy"/></svg><h3>Legacy network</h3><p>Everyone who joins with your QR becomes your legacy. Earn from their activity across up to 10 levels.</p></article>
+      <article class="tile ink"><svg class="icon" style="color:#4db0ff"><use href="assets/sprite.svg#i-shop"/></svg><h3>Storefront sales</h3><p>Sell ecosystem products from your own storefront, on our subdomain or your own domain, with every sale tracked to you.</p></article>
+    </div>
+
+    <div class="sec-head" id="amb-steps" style="margin-top:clamp(72px,9vw,120px)">
+      <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-clipboard-list"/></svg>The process</span>
+      <h2>From application to first payout.</h2>
+      <p class="lead">You apply inside the reID app. Once approved, you work from a dedicated Ambassador portal in reCorporate, separate from any merchant dashboard.</p>
+    </div>
+    <div class="steps amb-steps">
+      <div class="step"><span class="n">01</span><h4>Create your reID</h4><p>Download the app and verify your identity.</p></div>
+      <div class="step"><span class="n">02</span><h4>Apply in the app</h4><p>Submit your Ambassador application from your account.</p></div>
+      <div class="step"><span class="n">03</span><h4>Complete the Academy</h4><p>Learn the products, the pitch and compliance basics.</p></div>
+      <div class="step"><span class="n">04</span><h4>Pass the test</h4><p>A short assessment confirms you're ready.</p></div>
+      <div class="step"><span class="n">05</span><h4>Get approved</h4><p>Receive your login for the Ambassador portal.</p></div>
+      <div class="step"><span class="n">06</span><h4>Launch your storefront</h4><p>Your page goes live with your QR and tracking code.</p></div>
+      <div class="step"><span class="n">07</span><h4>Onboard your network</h4><p>Sign up people and businesses and track each one.</p></div>
+      <div class="step"><span class="n">08</span><h4>Get paid</h4><p>Commissions are tracked automatically and paid to your reID wallet.</p></div>
+    </div>
+
+    <div class="apply" style="margin-top:clamp(56px,7vw,96px)">
+      <div><h2 style="font-size:clamp(30px,4vw,48px)">Become a reID Ambassador.</h2><p>Apply from your reID app. Approval includes Academy training, your storefront and portal access.</p></div>
+      <div class="row"><a class="btn btn-line" href="https://app.reidentity.net" target="_blank" rel="noopener">Start your application</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section class="sec" id="ecosystem">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-resystem"/></svg>Part of ReSystem</span>
+      <h2>One reID opens the whole ecosystem.</h2>
+      <p class="lead">Sign in once and move between products that already know who you are.</p>
+    </div>
+    <div class="eco">
+      <a href="https://rewallet.online" target="_blank" rel="noopener"><b>reWallet<svg class="ic"><use href="assets/sprite.svg#i-arrow-up-right"/></svg></b><span>Decentralized multi-network wallet.</span></a>
+      <a href="https://remarketplace.store" target="_blank" rel="noopener"><b>reMarketplace<svg class="ic"><use href="assets/sprite.svg#i-arrow-up-right"/></svg></b><span>Prebuilt white-label apps and products.</span></a>
+      <a href="https://resystem.org/reinvest" target="_blank" rel="noopener"><b>reInvest<svg class="ic"><use href="assets/sprite.svg#i-arrow-up-right"/></svg></b><span>Private wealth and investment.</span></a>
+      <a href="https://resystem.org" target="_blank" rel="noopener"><b>ReSystem<svg class="ic"><use href="assets/sprite.svg#i-arrow-up-right"/></svg></b><span>Modular apps for identity, payments and more.</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" style="padding-top:0" id="faq">
+  <div class="wrap faq">
+    <div class="sec-head">
+      <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-info-circle"/></svg>FAQ</span>
+      <h2>Questions, answered.</h2>
+      <p class="lead">Can't find what you need? <a href="#contact" style="color:var(--blue-d)">Contact the team</a>.</p>
+    </div>
+    <div>
+      <details open><summary>What is reID?<svg class="ic"><use href="assets/sprite.svg#i-chevron-down-arrow"/></svg></summary><p>reID is your digital identity passport: one verified account to sign in to apps, hold cash and crypto, share your profile and earn from your network.</p></details>
+      <details><summary>Is my data private?<svg class="ic"><use href="assets/sprite.svg#i-chevron-down-arrow"/></svg></summary><p>Yes. You choose what each app can see. Apps receive verified claims, like "identity verified", rather than your documents.</p></details>
+      <details><summary>How does verification work?<svg class="ic"><use href="assets/sprite.svg#i-chevron-down-arrow"/></svg></summary><p>Scan your passport and complete a quick liveness check with our regulated KYC provider, or stake tokens to lift limits. You verify once and every connected app recognises it.</p></details>
+      <details><summary>How do I earn with the legacy network?<svg class="ic"><use href="assets/sprite.svg#i-chevron-down-arrow"/></svg></summary><p>Share your reID QR. Everyone who joins through it becomes part of your legacy, and a share of the transactions your network makes, across up to 10 levels, is paid to your wallet.</p></details>
+      <details><summary>What is reCorporate?<svg class="ic"><use href="assets/sprite.svg#i-chevron-down-arrow"/></svg></summary><p>reCorporate is the business version of reID: a desktop workspace for corporate identity, employees, roles and permissions, salaries, fiat and crypto accounts, and employee cashback.</p></details>
+      <details><summary>How do I add Sign in with reID to my app?<svg class="ic"><use href="assets/sprite.svg#i-chevron-down-arrow"/></svg></summary><p>Request API keys from your reCorporate account, install the reID SDK from npm or use any OpenID Connect library, and add the button.</p></details>
+      <details><summary>Who can become an Ambassador?<svg class="ic"><use href="assets/sprite.svg#i-chevron-down-arrow"/></svg></summary><p>Anyone with a verified reID who completes the Academy and passes the assessment. Apply from inside the reID app.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="sec" style="padding-top:0" id="download">
+  <div class="wrap">
+    <div class="dl">
+      <div>
+        <h2>Get your reID in minutes.</h2>
+        <p class="lead" style="margin-top:14px">Download the app or start on the web. Your identity, wallet and network in one place.</p>
+        <div class="row" style="margin-top:28px">
+          <a class="store-btn" href="#" data-store="App Store"><svg class="ic"><use href="assets/sprite.svg#i-download"/></svg><span><small>Download on the</small>App Store</span></a>
+          <a class="store-btn" href="#" data-store="Google Play"><svg class="ic"><use href="assets/sprite.svg#i-download"/></svg><span><small>Get it on</small>Google Play</span></a>
+          <a class="btn btn-line" href="https://app.reidentity.net" target="_blank" rel="noopener">Open web app</a>
+        </div>
+      </div>
+      <div class="qrs">
+        <div class="qr"><img src="assets/qr-app.svg" alt="QR code for app.reidentity.net">reID app</div>
+        <div class="qr"><img src="assets/qr-corporate.svg" alt="QR code for corporate.reidentity.net">reCorporate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" style="padding-top:0" id="contact">
+  <div class="wrap contact">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="kicker"><svg class="ic"><use href="assets/sprite.svg#i-mail"/></svg>Contact</span>
+        <h2>Talk to the reID team.</h2>
+        <p class="lead">Corporate accounts, Sign in with reID integrations, white-label and partnerships. We reply within one business day.</p>
+      </div>
+      <div class="reach">
+        <div><svg class="ic"><use href="assets/sprite.svg#i-mail"/></svg><span><small>Email</small><b>info@reidentity.net</b></span></div>
+        <div><svg class="ic"><use href="assets/sprite.svg#i-location"/></svg><span><small>Office</small><b>Dubai, United Arab Emirates</b></span></div>
+      </div>
+    </div>
+    <form class="form" id="contactForm" novalidate>
+      <label class="field"><span>Full name</span><input id="f-name" name="name" required autocomplete="name"></label>
+      <label class="field"><span>Work email</span><input id="f-email" name="email" type="email" required autocomplete="email"></label>
+      <label class="field"><span>Company</span><input id="f-company" name="company" autocomplete="organization"></label>
+      <label class="field"><span>I'm interested in</span>
+        <select id="f-topic" name="topic"><option>reCorporate account</option><option>Sign in with reID</option><option>Ambassador Program</option><option>White-label reID</option><option>Partnership</option><option>Something else</option></select></label>
+      <label class="field full"><span>Message</span><textarea id="f-msg" name="message" required placeholder="Tell us about your business and what you'd like to do."></textarea></label>
+      <div class="full row"><button class="btn btn-blue" type="submit" id="f-submit">Send message</button><span class="mute" style="font-size:14px">Or email info@reidentity.net</span></div>
+      <div class="form-msg" id="f-out" hidden></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="assets/logo.svg" alt="reID — Your digital identity passport"><p>One identity to sign in, verify, pay and earn. Part of the ReSystem ecosystem.</p></div>
+      <div><h5>Products</h5><a href="#personal">reID Personal</a><a href="#wallet">Wallet</a><a href="#corporate">reCorporate</a><a href="#sso">Sign in with reID</a></div>
+      <div><h5>Earn</h5><a href="#legacy">Legacy network</a><a href="#ambassador">Ambassador Program</a><a href="#use-cases">Use cases</a></div>
+      <div><h5>Ecosystem</h5><a href="https://resystem.org" target="_blank" rel="noopener">ReSystem</a><a href="https://rewallet.online" target="_blank" rel="noopener">reWallet</a><a href="https://remarketplace.store" target="_blank" rel="noopener">reMarketplace</a></div>
+      <div><h5>Follow</h5><a href="https://x.com/Reidentity_net" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/resystemglobal/" target="_blank" rel="noopener">LinkedIn</a><a href="#contact">Contact</a></div>
+    </div>
+    <div class="fine"><span>© <span id="yr">2026</span> reidentity.net · reID</span><span><a href="https://resystem.org/privacy-policy" target="_blank" rel="noopener">Privacy</a> · <a href="https://resystem.org/terms-condition" target="_blank" rel="noopener">Terms</a> · <a href="https://resystem.org/cookie-policy" target="_blank" rel="noopener">Cookies</a></span></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
