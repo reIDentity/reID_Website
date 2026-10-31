@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url><loc>https://reidentity.net/</loc><lastmod>2026-10-31</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
-    <image:image><image:loc>https://reidentity.net/assets/brand/og-home.jpg</image:loc></image:image>
+    <image:image><image:loc>https://reidentity.net/assets/brand/og-home-v2.jpg</image:loc></image:image>
     <video:video><video:thumbnail_loc>https://reidentity.net/assets/video/reid-explainer-poster.jpg</video:thumbnail_loc><video:title>What is reID?</video:title><video:description>A 2-minute walkthrough of reID for individuals, freelancers and businesses.</video:description><video:content_loc>https://reidentity.net/assets/video/reid-explainer.mp4</video:content_loc><video:duration>118</video:duration></video:video>
   </url>
   <url><loc>https://reidentity.net/support</loc><lastmod>2026-10-31</lastmod><priority>0.6</priority></url>
