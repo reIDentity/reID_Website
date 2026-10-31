@@ -526,3 +526,8 @@ footer{position:relative;background:var(--paper);padding-block:96px 32px;overflo
 .eco-flow i{font-style:normal;color:var(--mute)}
 @media (max-width:620px){.orbit .sat span{font-size:12px;padding:7px 10px;gap:6px}.orbit .sat span .ic{width:14px;height:14px}.eco-stats{grid-template-columns:1fr 1fr 1fr}.eco-stats div{padding:14px}}
 @media (max-width:1100px){.eco{grid-template-columns:1fr}.orbit{max-width:560px}}
+.amb-proc{display:grid;gap:clamp(32px,4vw,56px)}
+.amb-proc .amb-head{position:static!important;max-width:900px;margin-bottom:0}
+.amb-proc .timeline{max-width:none;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(24px,4vw,64px)}
+.amb-proc .timeline .rail{display:none}
+@media (max-width:760px){.amb-proc .timeline{grid-template-columns:1fr}.amb-proc .timeline .rail{display:block}}

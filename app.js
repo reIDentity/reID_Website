@@ -327,13 +327,13 @@
   function fallbacks() { legacy(false); orbit(); $$('[data-ticker]').forEach(function (t) { t.textContent = fmt(parseFloat(t.dataset.ticker), 2); }); var tt = $('#payType'); if (tt) tt.textContent = 'tomboy@reid'; var pr = $('#payRes'); if (pr) pr.classList.add('show'); var vs = $('#vStatus'); if (vs) vs.textContent = 'Verified · limits lifted'; }
 
   function legacy(scroll) {
-    var LV = ['Your direct invites', 'Friends of your friends', 'Your network keeps spreading', 'Every member strengthens it', 'Earnings compound as levels grow', 'Your legacy works while you sleep', 'Built by consistent sharing', 'Businesses and merchants count too', 'Almost the full reach', 'The deepest level you earn from'];
-    var TXT = ['People who scan your QR and join reID.', 'People your invites bring in. You earn from them too.', 'Your network reaches people you may never meet.', 'More members, more activity, more cashback.', 'Each level adds to what flows back to you.', 'Activity at every level keeps earning for you.', 'Deep networks grow from steady sharing.', 'Merchants and corporates in your legacy count too.', 'Nine levels of activity working for you.', 'Your network, forever.'];
+    var LV = ['Your direct invites', 'Friends of your friends', 'Your network keeps spreading', 'Every member strengthens it', 'Earnings compound as levels grow', 'Your legacy works while you sleep', 'Built by consistent sharing', 'Businesses and merchants count too', 'And it keeps going', 'No limit on depth'];
+    var TXT = ['People who scan your QR and join reID.', 'People your invites bring in. You earn from them too.', 'Your network reaches people you may never meet.', 'More members, more activity, more cashback.', 'Each level adds to what flows back to you.', 'Activity at every level keeps earning for you.', 'Deep networks grow from steady sharing.', 'Merchants and corporates in your legacy count too.', 'Every new level adds to what flows back to you.', 'Your legacy has unlimited levels. It keeps earning, forever.'];
     var wrap = $('#levels'); if (!wrap || wrap.dataset.done) return; wrap.dataset.done = 1;
     var sel = 0, counts = [], total = 0;
     LV.forEach(function (l, k) {
       var b = document.createElement('button'); b.type = 'button'; b.className = 'lv'; b.setAttribute('aria-pressed', k === 0 ? 'true' : 'false');
-      b.innerHTML = '<img src="assets/levels/level-' + (k + 1) + '.svg" alt="">L' + (k + 1);
+      b.innerHTML = '<img src="assets/levels/level-' + (k + 1) + '.svg" alt="">' + (k === 9 ? 'L10+ ∞' : 'L' + (k + 1));
       b.addEventListener('click', function () { set(k, true); }); wrap.appendChild(b);
     });
     var cv = $('#netCanvas'), ctx = cv.getContext('2d'), W = cv.width, C = W / 2, rings = [], seed = 7;
@@ -343,8 +343,8 @@
     function set(k, manual) {
       if (k === sel && !manual) return; sel = k;
       $$('.lv').forEach(function (b, j) { b.setAttribute('aria-pressed', j === k ? 'true' : 'false'); });
-      $('#lvTitle').textContent = 'Level ' + (k + 1) + ' · ' + LV[k]; $('#lvText').textContent = TXT[k];
-      numEl.textContent = counts[k].toLocaleString();
+      $('#lvTitle').textContent = (k === 9 ? 'Level 10 and beyond' : 'Level ' + (k + 1)) + ' · ' + LV[k]; $('#lvText').textContent = TXT[k];
+      numEl.textContent = k === 9 ? counts[k].toLocaleString() + '+' : counts[k].toLocaleString();
     }
     var t0 = performance.now(), vis = true;
     if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { vis = e[0].isIntersecting; }).observe(cv);
