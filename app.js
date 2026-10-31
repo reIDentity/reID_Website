@@ -17,8 +17,9 @@
   }
 
   /* ---------- smooth scroll ---------- */
-  var lenis = null;
-  if (!reduce && window.Lenis && hasG) {
+  var lenis = null, mob = matchMedia('(max-width:760px), (pointer:coarse)').matches;
+  if (hasG && window.ScrollTrigger) ScrollTrigger.config({ ignoreMobileResize: true });
+  if (!reduce && window.Lenis && hasG && !mob) {
     lenis = new Lenis({ duration: 1.15, smoothWheel: true });
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
@@ -142,8 +143,8 @@
   $$('.kicker').forEach(function (k) { gsap.from(k, { x: -20, opacity: 0, duration: .8, ease: 'power3.out', scrollTrigger: { trigger: k, start: 'top 92%' } }); });
 
   /* ---------- hero scroll-out ---------- */
-  gsap.to('#heroArt .paint', { yPercent: 12, scale: 1.08, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
-  gsap.to('.hero-l', { yPercent: -18, opacity: .2, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
+  if (!mob) gsap.to('#heroArt .paint', { yPercent: 12, scale: 1.08, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
+  if (!mob) gsap.to('.hero-l', { yPercent: -18, opacity: .2, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
 
   /* ---------- marquees (velocity aware) ---------- */
   $$('.mq-t').forEach(function (t) {
@@ -199,7 +200,7 @@
   mm.add('(min-width: 901px)', function () {
     steps.forEach(function (s, i) { ScrollTrigger.create({ trigger: s, start: 'top 55%', end: 'bottom 55%', onToggle: function (st) { if (st.isActive) showScreen(i); } }); });
     gsap.from('#tourDevice', { y: 120, rotation: -6, opacity: 0, duration: 1.2, ease: 'power4.out', scrollTrigger: { trigger: '#app', start: 'top 70%' } });
-    $$('.tour-stage .orb').forEach(function (o, i) { gsap.to(o, { y: i % 2 ? -60 : 60, ease: 'none', scrollTrigger: { trigger: '#app', start: 'top bottom', end: 'bottom top', scrub: true } }); });
+    if (!mob) $$('.tour-stage .orb').forEach(function (o, i) { gsap.to(o, { y: i % 2 ? -60 : 60, ease: 'none', scrollTrigger: { trigger: '#app', start: 'top bottom', end: 'bottom top', scrub: true } }); });
   });
   mm.add('(max-width: 760px)', function () {
     // phones: swiping the step cards changes the phone screen
@@ -244,7 +245,7 @@
   ScrollTrigger.create({ trigger: '#dash3d', start: 'top 60%', once: true, onEnter: function () { $$('#dash3d [data-ticker]').forEach(function (t) { countUp(t, +t.dataset.ticker, 2, 2); }); } });
 
   /* ---------- verify ---------- */
-  gsap.to('#verifyFrame>img', { yPercent: -8, ease: 'none', scrollTrigger: { trigger: '#verifyFrame', start: 'top bottom', end: 'bottom top', scrub: true } });
+  if (!mob) gsap.to('#verifyFrame>img', { yPercent: -8, ease: 'none', scrollTrigger: { trigger: '#verifyFrame', start: 'top bottom', end: 'bottom top', scrub: true } });
   gsap.fromTo('#vProg', { scaleX: 0 }, { scaleX: 1, duration: 2.2, ease: 'power2.inOut', scrollTrigger: { trigger: '#verifyFrame', start: 'top 65%' }, onComplete: function () { $('#vStatus').textContent = 'Verified · limits lifted'; } });
 
   /* ---------- legacy ---------- */
@@ -265,7 +266,7 @@
   }
   ScrollTrigger.create({ trigger: '#walletStage', start: 'top 70%', once: true, onEnter: payLoop });
   gsap.from('#walletStage .device', { y: 140, rotation: 8, duration: 1.2, ease: 'power4.out', scrollTrigger: { trigger: '#walletStage', start: 'top 80%' } });
-  $$('#walletStage .coin').forEach(function (c, i) { gsap.to(c, { y: -40 - i * 25, rotation: 25 * (i % 2 ? -1 : 1), ease: 'none', scrollTrigger: { trigger: '#walletStage', start: 'top bottom', end: 'bottom top', scrub: true } }); });
+  if (!mob) $$('#walletStage .coin').forEach(function (c, i) { gsap.to(c, { y: -40 - i * 25, rotation: 25 * (i % 2 ? -1 : 1), ease: 'none', scrollTrigger: { trigger: '#walletStage', start: 'top bottom', end: 'bottom top', scrub: true } }); });
 
 
   /* ---------- reID chat: messages play in sequence ---------- */
@@ -284,12 +285,12 @@
   gsap.from('.demo', { y: 80, rotation: 3, opacity: 0, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: '.sso', start: 'top 60%' } });
 
   /* ---------- reCorporate ---------- */
-  gsap.to('.corp-hero>img', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '.corp-hero', start: 'top bottom', end: 'bottom top', scrub: true } });
+  if (!mob) gsap.to('.corp-hero>img', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '.corp-hero', start: 'top bottom', end: 'bottom top', scrub: true } });
   mm.add('(min-width: 901px)', function () {
     gsap.fromTo('#plane', { rotationX: 32, scale: .86, y: 60 }, { rotationX: 0, scale: 1, y: 0, ease: 'none', scrollTrigger: { trigger: '#dash3d', start: 'top 95%', end: 'top 20%', scrub: 1 } });
     gsap.from('#plane .cd-row>*, #plane .cd-side', { y: 60, opacity: 0, stagger: .08, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '#dash3d', start: 'top 70%' } });
   });
-  $$('#chaos span').forEach(function (s) { gsap.fromTo(s, { x: gsap.utils.random(-30, 30), y: gsap.utils.random(-14, 14), rotation: gsap.utils.random(-12, 12) }, { x: 0, y: 0, rotation: 0, ease: 'none', scrollTrigger: { trigger: '#chaos', start: 'top 95%', end: 'top 50%', scrub: true } }); });
+  if (!mob) $$('#chaos span').forEach(function (s) { gsap.fromTo(s, { x: gsap.utils.random(-30, 30), y: gsap.utils.random(-14, 14), rotation: gsap.utils.random(-12, 12) }, { x: 0, y: 0, rotation: 0, ease: 'none', scrollTrigger: { trigger: '#chaos', start: 'top 95%', end: 'top 50%', scrub: true } }); });
 
   // showcase autoplay with progress
   var tabs = $$('.sc-tab'), imgs = $$('.sc-img img'), copies = $$('.sc-copy [data-copy]'), sci = 0, scTw;
@@ -308,13 +309,13 @@
   var nodes = $$('#flow .node');
   gsap.to('#flowLine', { strokeDashoffset: 0, ease: 'none', scrollTrigger: { trigger: '#flow', start: 'top 80%', end: 'top 35%', scrub: true, onUpdate: function (s) { nodes.forEach(function (n, i) { n.classList.toggle('on', s.progress >= i / (nodes.length - 1) - .02); }); } } });
   gsap.from(nodes, { y: 40, opacity: 0, stagger: .08, duration: .8, ease: 'back.out(1.6)', scrollTrigger: { trigger: '#flow', start: 'top 85%' } });
-  gsap.fromTo('#qrHand', { y: 120, rotation: 10 }, { y: -40, rotation: -4, ease: 'none', scrollTrigger: { trigger: '#qrHand', start: 'top bottom', end: 'bottom top', scrub: true } });
+  if (!mob) gsap.fromTo('#qrHand', { y: 120, rotation: 10 }, { y: -40, rotation: -4, ease: 'none', scrollTrigger: { trigger: '#qrHand', start: 'top bottom', end: 'bottom top', scrub: true } });
 
   /* ---------- use cases ---------- */
   gsap.from('.case', { y: 100, opacity: 0, stagger: .12, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: '.cases', start: 'top 80%' } });
 
   /* ---------- ambassador ---------- */
-  gsap.to('.amb-art img', { yPercent: 8, ease: 'none', scrollTrigger: { trigger: '.amb-intro', start: 'top bottom', end: 'bottom top', scrub: true } });
+  if (!mob) gsap.to('.amb-art img', { yPercent: 8, ease: 'none', scrollTrigger: { trigger: '.amb-intro', start: 'top bottom', end: 'bottom top', scrub: true } });
   ScrollTrigger.create({ trigger: '#storeBody', start: 'top 75%', once: true, onEnter: function () {
     gsap.from('#storeBody .meter u', { scaleX: 0, duration: 1.4, stagger: .15, ease: 'power3.out' });
     $$('#storeBody [data-count]').forEach(function (b) { countUp(b, +b.dataset.count, 1.6); });

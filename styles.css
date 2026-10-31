@@ -662,3 +662,11 @@ footer{padding-block:64px 28px;margin-top:clamp(40px,5vw,72px)}
   .numbers b{font-size:52px}
 }
 @media (max-width:760px){.hz-track,.tour-steps{scroll-padding-inline:var(--pad)}.hz{overflow:visible}.hz-in{overflow:hidden}}
+/* phones: lighter compositing for smooth scroll */
+@media (max-width:760px),(pointer:coarse){
+.nav.solid{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(255,255,255,.97)}
+.chip,.idcard,.links,.btn-glass,.code{backdrop-filter:none;-webkit-backdrop-filter:none}
+.hero-r .paint,.tile.art>img,.frame>img,.corp-hero>img,.amb-art img,.legal-img,.fly{will-change:auto}
+.hero-r .paint{inset:0;width:100%;height:100%}
+.fly{filter:none}
+}
