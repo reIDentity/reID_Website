@@ -404,7 +404,7 @@
   var form = $('#contactForm'), out = $('#f-out'), btn = $('#f-submit');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var d = { name: $('#f-name').value.trim(), email: $('#f-email').value.trim(), company: $('#f-company').value.trim(), topic: $('#f-topic').value, message: $('#f-msg').value.trim() };
+    var d = { website: $('#f-hp').value, name: $('#f-name').value.trim(), email: $('#f-email').value.trim(), company: $('#f-company').value.trim(), topic: $('#f-topic').value, message: $('#f-msg').value.trim() };
     function show(c, m) { out.hidden = false; out.className = 'form-msg ' + c; out.textContent = m; }
     if (!d.name || !/^\S+@\S+\.\S+$/.test(d.email) || !d.message) return show('err', 'Add your name, a valid email and a message, then send again.');
     btn.disabled = true; btn.textContent = 'Sending…';

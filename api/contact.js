@@ -1,4 +1,5 @@
 // POST /api/contact — sends the enquiry to the reID team and a confirmation to the sender.
+// Without SMTP_* vars the request is relayed via FormSubmit to MAIL_TO (first message triggers a one-time activation email).
 // Env (Vercel → Settings → Environment Variables):
 //   SMTP_HOST, SMTP_PORT (465|587), SMTP_USER, SMTP_PASS,
 //   MAIL_FROM (e.g. "reID <info@reidentity.net>"), MAIL_TO (default info@reidentity.net)
@@ -24,6 +25,17 @@ module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const d = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
   if (!d.name || !/^\S+@\S+\.\S+$/.test(d.email || '') || !d.message) return res.status(400).json({ error: 'Name, email and message are required.' });
+  if (String(d.website || '').trim()) return res.status(200).json({ ok: true }); // honeypot
+  for (const k of ['name', 'email', 'company', 'topic', 'message']) if (d[k] && String(d[k]).length > 4000) return res.status(400).json({ error: 'Too long.' });
+  // No SMTP configured yet: relay through FormSubmit so enquiries still reach the team inbox.
+  if (!process.env.SMTP_HOST) {
+    try {
+      const r = await fetch('https://formsubmit.co/ajax/' + TEAM, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ _subject: `reID enquiry: ${d.topic || 'General'} — ${d.name}`, _replyto: d.email, _template: 'table', name: d.name, email: d.email, company: d.company || '', topic: d.topic || '', message: d.message }) });
+      if (!r.ok) throw new Error('relay ' + r.status);
+      return res.status(200).json({ ok: true, via: 'relay' });
+    } catch (e) { console.error(e); return res.status(502).json({ error: 'Mail relay failed' }); }
+  }
   try {
     const t = nodemailer.createTransport({ host: process.env.SMTP_HOST, port: +(process.env.SMTP_PORT || 465), secure: +(process.env.SMTP_PORT || 465) === 465, auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS } });
     const from = process.env.MAIL_FROM || `reID <${TEAM}>`;
