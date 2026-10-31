@@ -183,7 +183,7 @@
       var s = $('.scr', c); if (s) gsap.from(s, { y: 120, rotation: 8, ease: 'none', scrollTrigger: { trigger: c, containerAnimation: tw, start: 'left right', end: 'center center', scrub: true } });
     });
   });
-  mm.add('(max-width: 900px)', function () {
+  mm.add('(min-width: 761px) and (max-width: 900px)', function () {
     $$('.pw').forEach(function (c) { gsap.from(c, { y: 60, opacity: 0, duration: .9, ease: 'power3.out', scrollTrigger: { trigger: c, start: 'top 88%' } }); });
   });
 
@@ -201,7 +201,13 @@
     gsap.from('#tourDevice', { y: 120, rotation: -6, opacity: 0, duration: 1.2, ease: 'power4.out', scrollTrigger: { trigger: '#app', start: 'top 70%' } });
     $$('.tour-stage .orb').forEach(function (o, i) { gsap.to(o, { y: i % 2 ? -60 : 60, ease: 'none', scrollTrigger: { trigger: '#app', start: 'top bottom', end: 'bottom top', scrub: true } }); });
   });
-  mm.add('(max-width: 900px)', function () {
+  mm.add('(max-width: 760px)', function () {
+    // phones: swiping the step cards changes the phone screen
+    var row = $('#tourSteps'), io2 = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) showScreen(+e.target.dataset.s); }); }, { root: row, threshold: .6 });
+    steps.forEach(function (s) { io2.observe(s); s.addEventListener('click', function () { s.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }); }); });
+    return function () { io2.disconnect(); };
+  });
+  mm.add('(min-width: 761px) and (max-width: 900px)', function () {
     var i = 0, h = setInterval(function () { i = (i + 1) % scrns.length; showScreen(i); }, 3200);
     return function () { clearInterval(h); };
   });

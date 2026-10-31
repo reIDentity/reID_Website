@@ -617,3 +617,48 @@ footer{padding-block:64px 28px;margin-top:clamp(40px,5vw,72px)}
 .ch-pay .rc{color:#0062C8;font-weight:700}
 .hp .h-sm{margin-top:6px}
 @media (max-width:900px){.loader{display:none}}
+/* ---- mobile polish pass ---- */
+:where(img){height:auto}
+.net-center,.hub-core,.o-core,.core{overflow:hidden;min-height:0}
+.net-center img,.hub-core img,.o-core img{width:56%;height:auto;max-height:56%;object-fit:contain}
+.corp-tag img{height:26px;width:auto}
+.sso>*,.split>*,.legacy-grid>*,.secu-grid>*,.eco>*,.evr-grid>*,.vid-grid>*,.tour>*,.contact>*,.faq>*,.amb-intro>*{min-width:0}
+.demo{min-width:0;max-width:100%}
+.code{max-width:100%}
+@media (max-width:420px){.flow{gap:6px}.node{min-width:0}.node .ib{width:54px;height:54px;border-radius:18px}.node span{font-size:12.5px}}
+/* ---- phones: Apple-style swipe rows ---- */
+@media (max-width:760px){
+  .m-snap{display:flex!important;grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:calc(-1 * var(--pad));padding:4px var(--pad) 18px;scroll-padding-inline:var(--pad);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .m-snap::-webkit-scrollbar{display:none}
+  .m-snap>*{flex:0 0 82%;scroll-snap-align:start;min-width:0}
+  .cases.m-snap>*{flex-basis:78%;min-height:440px}
+  .case p{max-height:none;opacity:1}
+  .earn .tile{min-height:280px}
+  /* superpowers as a swipe row */
+  .hz-in{padding-block:64px 24px}
+  .hz-head{margin-bottom:20px}
+  .hz-track{flex-direction:row!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:4px var(--pad) 18px!important;scrollbar-width:none}
+  .hz-track::-webkit-scrollbar{display:none}
+  .pw{flex:0 0 80%!important;width:auto!important;height:470px!important;scroll-snap-align:start}
+  /* app tour: phone first, step cards swipe beneath */
+  .tour-stage{padding-block:12px 4px}
+  .device{width:min(270px,68vw)}
+  .tour-steps{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:calc(-1 * var(--pad));padding:8px var(--pad) 18px;scrollbar-width:none}
+  .tour-steps::-webkit-scrollbar{display:none}
+  .tstep,.tstep:first-child{flex:0 0 84%;min-height:0!important;scroll-snap-align:center;padding:22px!important;border-radius:22px;background:var(--paper);gap:10px;opacity:1!important}
+  .tstep.on{background:var(--blue-s)}
+  .tstep h3{font-size:26px!important}
+  .tstep p{font-size:16px!important}
+  .tstep .kicker{display:none}
+  /* tighter mobile rhythm */
+  .sec{padding-block:56px}
+  h2{font-size:clamp(32px,9vw,44px)}
+  .lead{font-size:16.5px}
+  .dl .qrs{display:none}
+  .wallet-stage{min-height:600px}
+  .evr-stage{height:700px}
+  .corp-hero{min-height:72svh}
+  .frame{aspect-ratio:4/4}
+  .numbers b{font-size:52px}
+}
+@media (max-width:760px){.hz-track,.tour-steps{scroll-padding-inline:var(--pad)}.hz{overflow:visible}.hz-in{overflow:hidden}}

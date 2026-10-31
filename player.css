@@ -76,3 +76,8 @@
 .wc-txt b{display:block;font-size:16px;font-weight:600;color:var(--ink)}
 .wc-txt small{display:block;font-size:13px;color:var(--mute);margin-top:2px}
 @media (max-width:420px){.wc-thumb{width:104px}.wc-txt b{font-size:15px}.wc-txt small{font-size:12px}}
+@media (max-width:620px){
+  .vp-reopen{padding:0;width:52px;height:52px;justify-content:center;border-radius:50%;font-size:0;gap:0;box-shadow:0 14px 30px -10px rgba(11,18,32,.5)}
+  .vp-reopen .i-play{transform:scale(1);margin-left:4px}
+  .vp.mini{width:min(300px,calc(100vw - 24px))}
+}
