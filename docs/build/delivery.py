@@ -32,7 +32,7 @@ P.append(sec('01', 'Executive summary', f'''
 <li>Store-ready Privacy, Terms, Cookies, Account deletion and Support pages hosted on the site.</li>
 <li>SEO, social sharing and AI discovery: structured data, OG images, sitemap, robots rules for AI crawlers, <code>llms.txt</code> and an OpenAPI description so AI agents can send enquiries.</li>
 <li>Phone pass: Apple-style swipe rows, iOS Safari fixes, tighter rhythm on 360–430 px screens.</li></ul>
-<div class="callout"><b>Status:</b> live on Vercel from <code>main</code>. Remaining items are business actions (domain, mailboxes, SMTP, legal sign-off, store links), listed in section 17.</div>'''))
+<div class="callout"><b>Status:</b> live on Vercel from <code>main</code>. Remaining items are business actions (domain, mailboxes, SMTP, legal sign-off, store links), listed in section 16.</div>'''))
 
 P.append(sec('02', 'Scope, sources & brand rules', table(['Source', 'Used for'], [
  ['Old site resystem.org/id', 'Feature list, wording baseline'],
@@ -92,13 +92,11 @@ P.append(sec('06', 'Legacy, pay to name@reid & chat', f'''
 
 P.append(sec('07', 'Security, SSO & Sign in with reID', f'''
 <p>A hub animation shows reID as the single sign-on for the whole ecosystem: passkeys, device binding, encrypted storage, consent per app. The demo section lets visitors press a real-looking "Sign in with reID" button (with a tap hint) and watch the consent and success states — the same flow partners integrate via OAuth 2.0 / OpenID Connect.</p>
-{shot('d-security.jpg', 'Security & SSO hub')}
-<div style="margin-top:4mm">{shot('d-sso.jpg', 'Sign in with reID demo')}</div>'''))
+<div class="grid g2">{shot('d-security.jpg', 'Security & SSO hub')}{shot('d-sso.jpg', 'Sign in with reID demo')}</div>'''))
 
 P.append(sec('08', 'reCorporate', f'''
 <p>Built from the updated dashboard and role-management screenshots. A 3D-tilted, live dashboard (<code>#dash3d</code>) shows merchant identity, credential scan, cashback ticker, crypto network lines, legacy table and fiat marked "coming soon". Below it: versus tiles, a tabbed showcase (identity, roles, legacy, users, fiat, finance card), an onboarding flow line, steps, the legal pathway with QR, and industry chips.</p>
-{shot('d-corporate.jpg', 'reCorporate intro')}
-<div style="margin-top:4mm">{shot('d-dash3d.jpg', 'Live animated dashboard')}</div>'''))
+<div class="grid g2">{shot('d-corporate.jpg', 'reCorporate intro')}{shot('d-dash3d.jpg', 'Live animated dashboard')}</div>'''))
 
 P.append(sec('09', 'Ambassador & ecosystem', f'''
 <p>The Ambassador section sells the opportunity: personal storefront, earning tiles, and a horizontal five-step process (apply → verify → storefront → share → earn). The ecosystem section shows one reID connected to N industries in an orbit, with 1 / N / 0 stats (one identity, any number of industries, zero passwords).</p>
