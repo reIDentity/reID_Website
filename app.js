@@ -155,6 +155,24 @@
 
   var mm = gsap.matchMedia();
 
+
+  /* ---------- everything in one passport ---------- */
+  mm.add('(min-width: 0px)', function () {
+    var st = $('#evrStage');
+    gsap.from('#evrPhone', { y: 160, rotationX: 30, rotation: -6, opacity: 0, ease: 'power3.out', scrollTrigger: { trigger: st, start: 'top 90%', end: 'top 30%', scrub: 1 } });
+    gsap.from('#evrPhone .ep-t, #evrPhone .ep-corp, #evrPhone .ep-logo', { y: 30, opacity: 0, scale: .9, stagger: .08, duration: .7, ease: 'back.out(1.6)', scrollTrigger: { trigger: st, start: 'top 55%' } });
+    var from = { '.fc-wallet': [-260, -120, -14], '.fc-fiat': [-320, 80, 10], '.fc-cards': [320, -100, 18], '.fc-sim': [260, 200, -20], '.fc-contact': [-280, 260, -12], '.fc-chat': [300, -220, 12] };
+    Object.keys(from).forEach(function (sel) { var f = from[sel]; gsap.from(st.querySelector(sel), { x: f[0], y: f[1], rotation: f[2], opacity: 0, scale: .7, ease: 'power3.out', scrollTrigger: { trigger: st, start: 'top 80%', end: 'top 25%', scrub: 1.2 } }); });
+    ScrollTrigger.create({ trigger: st, start: 'top 50%', once: true, onEnter: function () { $$('#evrStage [data-count]').forEach(function (b) { countUp(b, +b.dataset.count, 1.8); }); } });
+    $$('#evrStage [data-depth]').forEach(function (el, i) { gsap.to(el, { yPercent: i % 2 ? -10 : 10, duration: 3 + i * .4, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 1.5 }); });
+  });
+  var evr = $('#evrStage');
+  if (evr && fine) evr.addEventListener('mousemove', function (e) {
+    var r = evr.getBoundingClientRect(), px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5;
+    $$('[data-depth]', evr).forEach(function (c) { var d = +c.dataset.depth; gsap.to(c, { x: px * d, y: py * d * .6, duration: .9, ease: 'power3', overwrite: 'auto' }); });
+    gsap.to('#evrPhone', { rotationY: px * 10, rotationX: -py * 8, duration: .9, ease: 'power3' });
+  });
+
   /* ---------- superpowers: pinned horizontal ---------- */
   mm.add('(min-width: 901px)', function () {
     var track = $('#hzTrack'), sec = $('.hz');
