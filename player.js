@@ -45,8 +45,18 @@
   v.addEventListener('click', function () { if (v.muted) { v.muted = false; return; } v.paused ? v.play() : v.pause(); });
   $('vpSound').addEventListener('click', function () { v.muted = false; if (v.paused) v.play(); });
   $('vpMute').addEventListener('click', function () { v.muted = !v.muted; });
-  $('vpExpand').addEventListener('click', function () { setMode(mode === 'modal' ? 'mini' : 'modal'); });
-  $('vpClose').addEventListener('click', function () { setMode('closed'); });
+  function isFs() { return !!(document.fullscreenElement || document.webkitFullscreenElement || v.webkitDisplayingFullscreen); }
+  function goFull() {
+    v.muted = false; if (v.paused) v.play();
+    var f = vp.querySelector('.vp-frame');
+    var rq = f.requestFullscreen || f.webkitRequestFullscreen;
+    if (rq) { var r = rq.call(f); if (r && r.then) r.then(function () { try { screen.orientation.lock('landscape').catch(function () {}); } catch (e) {} }).catch(function () { if (v.webkitEnterFullscreen) v.webkitEnterFullscreen(); }); }
+    else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen(); /* iPhone */
+  }
+  $('vpExpand').addEventListener('click', function () { if (mode === 'mini') setMode('modal'); else goFull(); });
+  v.addEventListener('dblclick', goFull);
+  document.addEventListener('fullscreenchange', function () { if (!document.fullscreenElement) { try { screen.orientation.unlock(); } catch (e) {} } });
+  $('vpClose').addEventListener('click', function () { if (document.fullscreenElement) document.exitFullscreen(); else if (document.webkitFullscreenElement) document.webkitExitFullscreen(); setMode('closed'); });
   back.addEventListener('click', function () { setMode('mini'); });
   reopen.addEventListener('click', function () { open(true); });
   [].forEach.call(document.querySelectorAll('[data-watch]'), function (b) { b.addEventListener('click', function () { v.currentTime = 0; open(true); }); });
@@ -56,9 +66,13 @@
 
   // scrolling while the pop-up is open docks it as a mini player, still playing
   var y0 = 0;
-  window.addEventListener('scroll', function () { if (mode === 'modal' && Math.abs(scrollY - y0) > 60) setMode('mini'); }, { passive: true });
-  window.addEventListener('wheel', function (e) { if (mode === 'modal' && Math.abs(e.deltaY) > 20) setMode('mini'); }, { passive: true });
-  window.addEventListener('touchmove', function () { if (mode === 'modal') setMode('mini'); }, { passive: true });
+  var rot = 0; function hold() { rot = Date.now(); y0 = scrollY; }
+  window.addEventListener('resize', hold); window.addEventListener('orientationchange', hold);
+  v.addEventListener('webkitendfullscreen', hold); document.addEventListener('fullscreenchange', hold);
+  function canDock() { return mode === 'modal' && !isFs() && Date.now() - rot > 1200; }
+  window.addEventListener('scroll', function () { if (canDock() && Math.abs(scrollY - y0) > 60) setMode('mini'); }, { passive: true });
+  window.addEventListener('wheel', function (e) { if (canDock() && Math.abs(e.deltaY) > 20) setMode('mini'); }, { passive: true });
+  window.addEventListener('touchmove', function (e) { if (canDock() && !vp.contains(e.target)) setMode('mini'); }, { passive: true });
 
   // first visit: pop up after the intro animation
   var seen = false; try { seen = localStorage.getItem(KEY) === '1'; } catch (e) {}

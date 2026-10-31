@@ -81,3 +81,9 @@
   .vp-reopen .i-play{transform:scale(1);margin-left:4px}
   .vp.mini{width:min(300px,calc(100vw - 24px))}
 }
+/* true full screen (Android / desktop; iPhone uses the native player) */
+.vp-frame:fullscreen{width:100vw;height:100vh;aspect-ratio:auto;background:#000;display:flex;align-items:center;justify-content:center}
+.vp-frame:-webkit-full-screen{width:100vw;height:100vh;aspect-ratio:auto;background:#000}
+.vp-frame:fullscreen video,.vp-frame:-webkit-full-screen video{width:100%;height:100%;object-fit:contain}
+.vp-frame:fullscreen .vp-sound{display:none}
+.vp-frame:fullscreen .vp-bar{position:absolute;left:0;right:0;bottom:0;padding-bottom:max(12px,env(safe-area-inset-bottom))}
