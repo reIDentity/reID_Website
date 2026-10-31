@@ -14,6 +14,9 @@ npm start        # http://localhost:3000
 Import the repo as a new project (framework: Other). Add env vars for the contact form:
 `SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, MAIL_FROM, MAIL_TO`. Point `reidentity.net` to the project.
 
+## Legal pages
+`privacy.html`, `terms.html`, `cookies.html` are generated from `tools/build_legal.py` (edit the text there, then run `python3 tools/build_legal.py`). Have them reviewed by legal counsel before go-live.
+
 ## Assets
 - `assets/img/` — paintings and app/reCorporate screens from the reID and reCorporate pitch decks (webp)
 - `assets/sprite.svg` — reID pixel icon set (from `reIDentity/reid-icons`, recoloured to `currentColor`)

@@ -134,7 +134,7 @@
   if (reduce) { fallbacks(); return; }
 
   /* ---------- generic reveals ---------- */
-  ScrollTrigger.batch('.tile, .step, .check, .cb-cards>div, .vid-feats>div, .eco-list a, details, .reach>div, .ch, .feat-list>div, .qrb', {
+  ScrollTrigger.batch('.tile, .step, .check, .cb-cards>div, .vid-feats>div, .eco-stats>div, details, .reach>div, .ch, .feat-list>div, .qrb', {
     start: 'top 88%', once: true,
     onEnter: function (els) { gsap.from(els, { y: 50, opacity: 0, duration: .9, stagger: .07, ease: 'power3.out', clearProps: 'transform,opacity' }); }
   });
@@ -374,7 +374,7 @@
     var sats = $$('.sat', o);
     function place(t) {
       var R = o.clientWidth;
-      sats.forEach(function (s) { var r = +s.dataset.r * R, a = +s.dataset.a + (reduce ? 0 : t * (s.dataset.r > .4 ? .00012 : -.0002)); s.firstElementChild.style.left = Math.cos(a) * r + 'px'; s.firstElementChild.style.top = Math.sin(a) * r + 'px'; });
+      sats.forEach(function (s) { var r = +s.dataset.r * R, a = +s.dataset.a + (reduce ? 0 : t * (s.dataset.r > .4 ? .00008 : -.00014)); s.firstElementChild.style.left = Math.cos(a) * r + 'px'; s.firstElementChild.style.top = Math.sin(a) * r + 'px'; });
       if (!reduce) requestAnimationFrame(place);
     }
     requestAnimationFrame(place);
