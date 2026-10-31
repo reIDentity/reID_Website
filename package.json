@@ -11,9 +11,8 @@
     "node": ">=18"
   },
   "dependencies": {
+    "compression": "^1.8.2",
     "express": "^4.19.2",
-    "gsap": "^3.12.5",
-    "lenis": "^1.1.13",
     "nodemailer": "^6.9.16"
   }
 }

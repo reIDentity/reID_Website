@@ -67,7 +67,7 @@
 
   /* ---------- hero pixel field ---------- */
   (function () {
-    var cv = $('#pixels'); if (!cv) return; var ctx = cv.getContext('2d'), W, H, S = 22, mx = -999, my = -999, dpr = Math.min(2, window.devicePixelRatio || 1);
+    var cv = $('#pixels'); if (!cv || window.innerWidth < 900) return; var ctx = cv.getContext('2d'), W, H, S = window.innerWidth < 900 ? 30 : 22, mx = -999, my = -999, dpr = Math.min(2, window.devicePixelRatio || 1);
     function size() { var r = cv.getBoundingClientRect(); W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
     size(); window.addEventListener('resize', size);
     $('#hero').addEventListener('mousemove', function (e) { var r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; });
@@ -111,14 +111,14 @@
       .from('#heroArt .chip', { y: 40, opacity: 0, scale: .9, duration: .8, stagger: .14, ease: 'back.out(1.6)' }, .9);
     $$('.hero-meta [data-count]').forEach(function (b) { countUp(b, +b.dataset.count, 1.6); });
   }
-  if (loader && hasG && !reduce) {
+  if (loader && hasG && !reduce && window.innerWidth > 900) {
     var parts = $$('#loaderLogo rect, #loaderLogo path');
     var lt = gsap.timeline({ onComplete: function () { loader.classList.add('gone'); intro(); } });
-    lt.from(parts, { x: function () { return gsap.utils.random(-60, 60); }, y: function () { return gsap.utils.random(-40, 40); }, rotation: function () { return gsap.utils.random(-90, 90); }, opacity: 0, transformOrigin: 'center', duration: .9, stagger: .025, ease: 'power3.out' })
-      .to('#loaderBar', { scaleX: 1, duration: 1.1, ease: 'power2.inOut' }, 0)
-      .to(loader, { yPercent: -100, duration: .8, ease: 'power4.inOut' }, '+=.15');
+    lt.from(parts, { x: function () { return gsap.utils.random(-60, 60); }, y: function () { return gsap.utils.random(-40, 40); }, rotation: function () { return gsap.utils.random(-90, 90); }, opacity: 0, transformOrigin: 'center', duration: .6, stagger: .015, ease: 'power3.out' })
+      .to('#loaderBar', { scaleX: 1, duration: .7, ease: 'power2.inOut' }, 0)
+      .to(loader, { yPercent: -100, duration: .6, ease: 'power4.inOut' }, '+=.05');
     setTimeout(function () { if (!loader.classList.contains('gone')) { loader.classList.add('gone'); } }, 4500);
-  } else if (loader) { loader.classList.add('gone'); }
+  } else if (loader) { loader.classList.add('gone'); intro(); }
 
   if (!hasG || !window.ScrollTrigger) { fallbacks(); return; }
 

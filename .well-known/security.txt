@@ -1,0 +1,5 @@
+Contact: mailto:security@reidentity.net
+Expires: 2027-10-31T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://reidentity.net/.well-known/security.txt
+Policy: https://reidentity.net/support#report-a-security-issue

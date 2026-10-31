@@ -1,8 +1,29 @@
-# reID (reidentity.net)
-> reID is a digital identity passport: one verified account to sign in, verify, pay, share and earn.
+# reID
 
-- Personal: passkey/wallet/social sign-in, passport verification, cash + crypto wallet, username transfers (name@reid), QR contact sharing, legacy network with unlimited levels.
-- reCorporate (corporate.reidentity.net, desktop): corporate identity, employees, roles & permissions, approvals, salaries, fiat and crypto accounts, employee cashback, API keys.
-- Sign in with reID: OAuth 2.0 / OpenID Connect, npm SDK.
-- Ambassador Program: apply in the reID app → Academy → test → approval → Ambassador portal and storefront → commissions.
-- Web app: https://app.reidentity.net · Contact: info@reidentity.net · Part of ReSystem (resystem.org).
+> reID (reidentity.net) is a digital identity passport: one verified account to sign in without passwords, verify once with KYC, pay anyone by username (name@reid), create private Virtual IDs with their own email, phone number, eSIM and debit card, chat with verified people, earn cashback and legacy rewards across unlimited levels, and run a business with reCorporate. It works as a single sign-on (SSO) for an entire ecosystem of apps through "Sign in with reID" (OAuth 2.0 / OpenID Connect).
+
+Operated by Desert Tech Cloud Services LLC, Dubai, United Arab Emirates. Available on iOS, Android and the web.
+
+## Get started (for people and agents acting on their behalf)
+- [Create a reID (web app)](https://app.reidentity.net): sign up, verify identity, use the wallet
+- [Open a reCorporate account](https://corporate.reidentity.net): business accounts, desktop
+- [Contact / book a demo](https://reidentity.net/#contact): or use the actions API below
+- [Actions API (OpenAPI 3.1)](https://reidentity.net/openapi.json): send an enquiry, demo request, Ambassador interest or account-deletion request
+- [Explainer video (2 min)](https://reidentity.net/assets/video/reid-explainer.mp4)
+
+## Product
+- [Full product description for AI assistants](https://reidentity.net/llms-full.txt)
+- [Home page](https://reidentity.net/): features, use cases, reCorporate, Ambassador Program, FAQ
+
+## Help and policies
+- [Support](https://reidentity.net/support)
+- [Delete your account](https://reidentity.net/delete-account)
+- [Privacy Policy](https://reidentity.net/privacy)
+- [Terms of Service](https://reidentity.net/terms)
+- [Cookie Policy](https://reidentity.net/cookies)
+
+## Contact
+- General and business: info@reidentity.net
+- Support: support@reidentity.net
+- Privacy: privacy@reidentity.net
+- Security: security@reidentity.net

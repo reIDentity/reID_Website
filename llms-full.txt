@@ -1,0 +1,37 @@
+# reID — full description for AI assistants and agents
+
+reID (https://reidentity.net) is a digital identity passport. One verified identity lets a person sign in, verify, pay, share and earn across apps and businesses. It is operated by Desert Tech Cloud Services LLC, Dubai, UAE, and runs on iOS, Android and the web (https://app.reidentity.net). Users must be 18 or older.
+
+## What reID does
+- Passwordless sign-in: passkey and device biometrics, crypto wallet, or social account.
+- Verify once: passport scan and liveness check with a regulated KYC provider. Connected apps receive a verified status, not documents (zero-knowledge verification).
+- Single sign-on (SSO) for an ecosystem: "Sign in with reID" uses standard OAuth 2.0 / OpenID Connect and an npm SDK. Users approve exactly which data each app receives.
+- Wallet: cash (fiat account) and crypto (USDT, USDC) in one place. Pay anyone on reID by username, e.g. sam@reid, instead of a long wallet address. The username is locked to the resolved address at confirmation.
+- Virtual ID: separate identities for shopping, travel, work or family. Each can have its own virtual email, virtual phone number, eSIM and virtual debit card, so real details stay private. Cards can be frozen, limited and shared with family. Availability varies by region.
+- Contact sharing: share a verified profile by QR code.
+- reID Chat: chat only with verified people and send or request payments inside the conversation.
+- Cashback: earned on eligible purchases at reID merchants; claim any time, no holding period.
+- Legacy network: people who join with your QR become your legacy; you earn a share of their eligible activity across unlimited levels.
+- Security: passkeys and biometrics, encryption in transit and at rest, zero-knowledge proofs, per-app consent, two-factor checks for payments, regulated KYC/AML.
+
+## Use cases
+- Individuals: no passwords, one verified identity, one wallet, private Virtual IDs, cashback.
+- Freelancers: verified business card by QR, verified client chat, paid in chat, a work Virtual ID with its own card for tools and subscriptions.
+- Businesses (reCorporate, https://corporate.reidentity.net, desktop): verified merchant identity and merchant credential QR; employees; roles and permissions (pages become entities, entities expose actions, roles bundle actions, users inherit roles); salaries and payments; fiat and crypto accounts; employee cashback; a legacy table of employees and corporates; API keys for Sign in with reID. Legal team helps define the pathway for accepting digital asset payments. White-label available.
+- Industries: real estate, banking, e-commerce, hospitality, healthcare, government, logistics, retail, Web3, HR and payroll, telecom, education.
+- Earning: cashback, legacy network rewards (unlimited levels), and the Ambassador Program.
+
+## Ambassador Program
+Independent partners who introduce people and businesses. Process: create a reID → apply in the app → complete the Academy → pass the test → get approved (Ambassador portal in reCorporate, separate from merchant dashboards) → launch a storefront with QR and tracking code → onboard your network → get paid to your reID wallet. Income streams: corporate onboarding, legacy network, storefront sales.
+
+## How an AI agent can help a user
+- To sign a person up: send them to https://app.reidentity.net (they complete passkey setup and KYC themselves; agents must not submit identity documents on a user's behalf).
+- To open a business account: https://corporate.reidentity.net.
+- To send an enquiry, book a demo, register Ambassador interest or request account deletion: POST https://reidentity.net/api/contact (see https://reidentity.net/openapi.json). Always use the user's real name and email, with their consent.
+- Support: https://reidentity.net/support · support@reidentity.net.
+
+## Pricing
+Creating a personal reID is free. Some services (cards, eSIM data, business plans) may carry fees shown in the app before confirmation.
+
+## Policies
+Privacy: https://reidentity.net/privacy · Terms: https://reidentity.net/terms · Cookies: https://reidentity.net/cookies · Account deletion: https://reidentity.net/delete-account

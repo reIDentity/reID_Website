@@ -21,3 +21,18 @@
   g.from('.lg-toc a', { x: -20, opacity: 0, duration: .6, stagger: .04, delay: .3, ease: 'power3.out' });
   ScrollTrigger.batch('.lg-sec', { start: 'top 88%', once: true, onEnter: function (els) { g.from(els, { y: 40, opacity: 0, duration: .8, stagger: .08, ease: 'power3.out', clearProps: 'all' }); } });
 })();
+(function () {
+  var f = document.getElementById('delForm'); if (!f) return;
+  var out = document.getElementById('d-out'), btn = document.getElementById('d-submit');
+  function show(c, m) { out.hidden = false; out.className = 'form-msg ' + c; out.textContent = m; }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('d-email').value.trim(), user = document.getElementById('d-user').value.trim(), note = document.getElementById('d-note').value.trim();
+    if (!/^\S+@\S+\.\S+$/.test(email)) return show('err', 'Enter the email address linked to your reID.');
+    btn.disabled = true; btn.textContent = 'Sending…';
+    fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: user || email, email: email, company: '', topic: 'Account deletion request', message: 'Delete my reID account.\nUsername: ' + (user || '-') + '\nNote: ' + (note || '-') }) })
+      .then(function (r) { if (!r.ok) throw 0; f.reset(); show('ok', 'Request received. We\'ll email ' + email + ' to confirm it\'s you, then delete your account within 30 days.'); })
+      .catch(function () { show('err', 'We couldn\'t send your request. Email privacy@reidentity.net instead.'); })
+      .then(function () { btn.disabled = false; btn.textContent = 'Request account deletion'; });
+  });
+})();

@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="/tools/fonts-abs.css">
+<style>
+*{margin:0;box-sizing:border-box}body{width:1200px;height:630px;font-family:"IBM Plex Sans",sans-serif;background:#fff;overflow:hidden}
+.c{position:relative;width:1200px;height:630px;background:radial-gradient(60% 80% at 80% 40%,#DCEEFF,#fff 70%);display:grid;grid-template-columns:600px 600px}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(0,145,255,.14) 1.6px,transparent 1.8px);background-size:22px 22px}
+.l{position:relative;padding:64px 0 0 64px;display:flex;flex-direction:column;gap:22px}
+.l img{height:56px;align-self:flex-start}
+h1{font-size:78px;line-height:.95;letter-spacing:-.05em;font-weight:600;color:#0B1220}h1 span{color:#0091FF}
+p{font-size:26px;color:#5E6A7E;line-height:1.35;max-width:500px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}.pills b{font-weight:500;font-size:18px;padding:9px 16px;border-radius:999px;background:#fff;border:1px solid #DDE4EE;color:#0B1220}
+.url{position:absolute;left:64px;bottom:44px;font:500 22px "IBM Plex Mono",monospace;color:#006EDB}
+.r{position:relative;margin:36px 36px 36px 0;border-radius:32px;overflow:hidden}
+.r img{width:100%;height:100%;object-fit:cover;object-position:22% 30%}
+.r::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 45%,transparent,rgba(12,8,4,.45))}
+.br{position:absolute;left:12%;top:9%;width:46%;height:62%;z-index:2}.br i{position:absolute;width:52px;height:52px;border:6px solid #fff}
+.br i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0;border-radius:12px 0 0 0}.br i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0;border-radius:0 12px 0 0}.br i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0;border-radius:0 0 0 12px}.br i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0;border-radius:0 0 12px 0}
+.beam{position:absolute;left:8px;right:8px;top:48%;height:4px;background:linear-gradient(90deg,transparent,#7CC4FF,#fff,#7CC4FF,transparent);box-shadow:0 0 24px 6px rgba(0,145,255,.6)}
+.chip{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;padding:12px 16px 12px 12px;border-radius:18px;background:#fff;box-shadow:0 20px 40px -14px rgba(10,40,90,.5);font-size:16px;color:#5E6A7E}
+.chip b{display:block;color:#0B1220;font-size:18px}.chip .d{width:38px;height:38px;border-radius:11px;background:#0091FF;color:#fff;display:grid;place-items:center;font-weight:700}
+</style></head><body><div class="c"><div class="dots"></div>
+<div class="l"><img src="../assets/logo-mark-text.svg"><h1 id="t">One identity<br>for <span>everything.</span></h1><p id="d">Sign in, verify, pay, share and earn with one secure ID.</p><div class="pills" id="p"><b>Passkey sign-in</b><b>Virtual ID</b><b>Cashback</b><b>reCorporate</b></div></div>
+<div class="r"><img src="../assets/img/hero-phone.webp"><div class="br"><i></i><i></i><i></i><i></i><span class="beam"></span></div>
+<div class="chip" style="right:24px;top:28px"><span class="d">✓</span><span><b>Identity verified</b>Passport + liveness</span></div>
+<div class="chip" style="left:24px;bottom:28px"><span class="d" style="background:#C29A52">$</span><span><b>Cashback +45.00</b>From your legacy</span></div></div>
+<span class="url">reidentity.net</span></div>
+<script>var q=new URLSearchParams(location.search);if(q.get('t')){document.getElementById('t').innerHTML=q.get('t');document.getElementById('d').textContent=q.get('d')||'';document.getElementById('p').innerHTML=(q.get('p')||'').split('|').filter(Boolean).map(function(x){return '<b>'+x+'</b>'}).join('')}</script>
+</body></html>

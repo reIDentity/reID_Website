@@ -70,3 +70,4 @@
 [].forEach.call(document.querySelectorAll('.try, .try-wrap, #cardStage'), function (el) {
   ['click', 'mouseenter'].forEach(function (ev) { el.addEventListener(ev === 'mouseenter' && el.id !== 'cardStage' ? 'x' : ev, function () { el.classList.add('used'); var t = el.querySelector('.tap'); if (t) t.style.opacity = 0; }); });
 });
+(function(){var b=document.getElementById('copyLink');if(!b)return;b.addEventListener('click',function(){var u='https://reidentity.net/';var done=function(){b.textContent='Link copied';setTimeout(function(){b.textContent='Copy link'},1800)};if(navigator.clipboard)navigator.clipboard.writeText(u).then(done,function(){b.textContent=u});else b.textContent=u;});})();

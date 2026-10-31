@@ -602,3 +602,18 @@ footer{padding-block:64px 28px;margin-top:clamp(40px,5vw,72px)}
 .secu-cards b{font-size:18px}.secu-cards p{color:var(--mute);font-size:15px}
 @media (max-width:900px){.secu-cards{grid-template-columns:1fr 1fr}}
 @media (max-width:540px){.secu-cards{grid-template-columns:1fr}.hub-app{font-size:12px;padding:6px 9px}}
+.foot .copylink{display:block;color:var(--mute);font-size:15px;padding-block:5px;text-align:left}.foot .copylink:hover{color:var(--blue)}
+/* audit fixes: contrast + heading sizes */
+.h-sm{font-size:18px;line-height:1.25;letter-spacing:-.01em;font-weight:600}
+.tstep .h-sm,.hp .h-sm{font-size:18px}
+.foot .fh{font-size:14px;font-weight:600;margin-bottom:14px;letter-spacing:0;line-height:1.3}
+.step .n,.lg-sec .n,.hp-n{color:#0062C8}
+.badge b{background:#0066CC}
+.tile.b,.pw.solid,.pw.solid .txt,.apply{background:#0068D6}
+.sso{background:linear-gradient(135deg,#0068D6 0%,#005CC0 60%,#004FA6 100%)}
+.hp.on .hp-n{background:#0066CC;border-color:#0066CC;color:#fff}
+.node.on .ib,.cb-node.out .ib{background:#0066CC;border-color:#0066CC}
+.cd-tags .kyc,.cd-lbl em,.wal em,.pf-rc span,.cash-btn{color:#0062C8}
+.ch-pay .rc{color:#0062C8;font-weight:700}
+.hp .h-sm{margin-top:6px}
+@media (max-width:900px){.loader{display:none}}

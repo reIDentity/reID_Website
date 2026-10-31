@@ -1,0 +1,39 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "reID public actions",
+    "version": "1.0.0",
+    "description": "Public endpoints that people and AI agents can use on a user's behalf: send an enquiry, book a reCorporate demo, register Ambassador interest or request account deletion. Use the user's real details and only with their consent. Account creation and identity verification happen in the reID app (https://app.reidentity.net) and cannot be done through this API.",
+    "contact": { "name": "reID", "email": "info@reidentity.net", "url": "https://reidentity.net/support" },
+    "termsOfService": "https://reidentity.net/terms"
+  },
+  "servers": [ { "url": "https://reidentity.net" } ],
+  "paths": {
+    "/api/contact": {
+      "post": {
+        "operationId": "sendEnquiry",
+        "summary": "Send an enquiry, demo request, Ambassador interest or account-deletion request to the reID team",
+        "description": "The team replies by email within one business day. The sender also receives a confirmation email.",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": {
+            "type": "object",
+            "required": ["name", "email", "message"],
+            "properties": {
+              "name": { "type": "string", "description": "Full name of the person" },
+              "email": { "type": "string", "format": "email", "description": "Email address the team should reply to" },
+              "company": { "type": "string", "description": "Company name, if any" },
+              "topic": { "type": "string", "enum": ["reCorporate account", "Sign in with reID", "Virtual ID", "Ambassador Program", "White-label reID", "Partnership", "Account deletion request", "Something else"] },
+              "message": { "type": "string", "description": "What the person needs" }
+            }
+          } } }
+        },
+        "responses": {
+          "200": { "description": "Sent", "content": { "application/json": { "schema": { "type": "object", "properties": { "ok": { "type": "boolean" } } } } } },
+          "400": { "description": "Missing name, email or message" },
+          "500": { "description": "Could not send; email info@reidentity.net instead" }
+        }
+      }
+    }
+  }
+}
