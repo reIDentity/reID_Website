@@ -1,0 +1,58 @@
+[
+ {
+  "key": "intro",
+  "title": "Meet reID.",
+  "text": "Meet reID. One digital identity, for everything you do online. Sign in, verify, pay, share, and earn, with one secure passport.",
+  "start": 0.0,
+  "dur": 10.052
+ },
+ {
+  "key": "individual",
+  "title": "For you",
+  "text": "For individuals, reID ends passwords. Sign in with a passkey, your wallet, or a social account. Verify your identity once, and every connected app trusts it. Hold cash and crypto in one wallet, and pay anyone by their name, like sam at reID, instead of a long address.",
+  "start": 10.052,
+  "dur": 19.033
+ },
+ {
+  "key": "privacy",
+  "title": "Virtual ID",
+  "text": "Create a Virtual ID for anything. One for shopping, one for travel, one for your family. Each gets its own email, phone number, eSIM, and debit card, so your real details always stay private.",
+  "start": 29.085,
+  "dur": 14.041
+ },
+ {
+  "key": "freelancer",
+  "title": "For freelancers",
+  "text": "For freelancers, reID is your verified business card. Share your profile with one QR code. Chat with clients who are verified too, and get paid right inside the conversation. Keep a separate Virtual ID for work, with its own card for tools and subscriptions.",
+  "start": 43.127,
+  "dur": 18.244
+ },
+ {
+  "key": "business",
+  "title": "For business",
+  "text": "For businesses, there's reCorporate. One corporate account for your verified merchant identity, your team, roles and permissions, salaries, payments, and fiat and crypto accounts. Add Sign in with reID to your own app, and welcome verified customers without sign-up forms.",
+  "start": 61.371,
+  "dur": 18.329
+ },
+ {
+  "key": "earn",
+  "title": "Earn extra",
+  "text": "And reID pays you back. Earn cashback on every eligible purchase. Invite friends with your QR code, and earn from your legacy network, across unlimited levels. Want more? Become a reID Ambassador, launch your own storefront, and earn commissions on everyone you bring in.",
+  "start": 79.7,
+  "dur": 18.777
+ },
+ {
+  "key": "features",
+  "title": "Everything unlocked",
+  "text": "Everything is unlocked by one reID. Wallet, fiat account, virtual cards and eSIM, contact sharing, chat, cashback, your legacy network, and your corporate account.",
+  "start": 98.477,
+  "dur": 12.612
+ },
+ {
+  "key": "cta",
+  "title": "Get started",
+  "text": "One identity, for everything. Get your reID today, at reidentity dot net.",
+  "start": 111.089,
+  "dur": 6.02
+ }
+]

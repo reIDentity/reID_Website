@@ -1,0 +1,65 @@
+/* Explainer player: modal on first visit, mini player when scrolling */
+.vp-backdrop{position:fixed;inset:0;z-index:280;background:rgba(11,18,32,.55);backdrop-filter:blur(6px);opacity:0;transition:opacity .4s}
+.vp-backdrop.on{opacity:1}
+.vp{position:fixed;z-index:290;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 60px 120px -30px rgba(10,30,70,.55),0 0 0 1px rgba(255,255,255,.6);transition:left .55s cubic-bezier(.7,0,.2,1),top .55s cubic-bezier(.7,0,.2,1),width .55s cubic-bezier(.7,0,.2,1),border-radius .4s}
+.vp.modal{width:min(1080px,calc(100vw - 32px));left:50%;top:50%;transform:translate(-50%,-50%)}
+.vp.mini{width:min(380px,calc(100vw - 24px));left:auto;top:auto;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:none;border-radius:18px;animation:vpin .5s cubic-bezier(.2,.8,.2,1)}
+@keyframes vpin{from{opacity:0;transform:translateY(30px) scale(.9)}}
+.vp-frame{position:relative;aspect-ratio:16/9;background:#0b1220}
+.vp video{width:100%;height:100%;display:block;object-fit:cover;cursor:pointer}
+.vp-sound{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;background:rgba(255,255,255,.95);color:var(--ink);font-weight:600;font-size:16px;box-shadow:0 20px 40px -12px rgba(0,0,0,.4);animation:vppulse 2s infinite}
+.vp-sound .ic{color:var(--blue)}
+@keyframes vppulse{0%{box-shadow:0 0 0 0 rgba(0,145,255,.5)}100%{box-shadow:0 0 0 18px rgba(0,145,255,0)}}
+.vp.mini .vp-sound{padding:8px 14px;font-size:13px;top:auto;bottom:52px;transform:translateX(-50%)}
+.vp-bar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(0deg,rgba(11,18,32,.75),transparent);color:#fff;opacity:1;transition:opacity .3s}
+.vp-frame:not(:hover) .vp-bar.idle{opacity:0}
+.vp-bar button{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:#fff;flex:none}
+.vp-bar button:hover{background:rgba(255,255,255,.18)}
+.vp-track{position:relative;flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,.3);cursor:pointer}
+.vp-track i{position:absolute;inset:0 auto 0 0;width:0;border-radius:3px;background:var(--blue)}
+.vp-marks span{position:absolute;top:-2px;width:2px;height:10px;background:rgba(255,255,255,.7)}
+.vp-time{font:500 13px var(--m);min-width:38px}
+.vp-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px 6px}
+.vp-head b{display:block;font-size:18px}
+.vp-head small{color:var(--mute);font-size:14px}
+.vp-ch{display:flex;gap:6px;padding:8px 20px 18px;overflow-x:auto;scrollbar-width:none}
+.vp-ch::-webkit-scrollbar{display:none}
+.vp-ch button{flex:none;padding:8px 14px;border-radius:999px;background:var(--paper);font-size:14px;font-weight:500;color:var(--ink2);transition:background .25s,color .25s}
+.vp-ch button.on{background:var(--ink);color:#fff}
+.vp.mini .vp-head,.vp.mini .vp-ch{display:none}
+.vp.mini .vp-bar{padding:6px 8px;gap:4px}.vp.mini .vp-bar button{width:30px;height:30px}.vp.mini .vp-time{display:none}
+/* icons drawn in CSS */
+.i-play,.i-pause,.i-vol,.i-exp,.i-x{position:relative;display:inline-block;width:14px;height:14px}
+.i-play{width:0;height:0;border-left:12px solid currentColor;border-top:7px solid transparent;border-bottom:7px solid transparent}
+.i-pause::before,.i-pause::after{content:"";position:absolute;top:0;width:4px;height:14px;background:currentColor;border-radius:1px}.i-pause::before{left:2px}.i-pause::after{right:2px}
+.i-vol::before{content:"";position:absolute;left:0;top:4px;width:5px;height:6px;background:currentColor}
+.i-vol::after{content:"";position:absolute;left:3px;top:0;border-right:8px solid currentColor;border-top:7px solid transparent;border-bottom:7px solid transparent}
+.i-vol.off{opacity:.55}
+.i-exp{border:2px solid currentColor;border-radius:3px}
+.i-x::before,.i-x::after{content:"";position:absolute;left:6px;top:-1px;width:2px;height:16px;background:currentColor;transform:rotate(45deg)}.i-x::after{transform:rotate(-45deg)}
+.vp-reopen{position:fixed;z-index:270;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:10px;padding:12px 18px 12px 14px;border-radius:999px;background:var(--ink);color:#fff;font-weight:500;font-size:15px;box-shadow:var(--shadow);animation:vpin .5s}
+.vp-reopen .i-play{border-left-color:#5BB8FF;transform:scale(.8)}
+.btn-watch{display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 6px;font-weight:500;font-size:16px;color:var(--ink)}
+.btn-watch .i-play{width:0;height:0;border-left:10px solid #fff;margin-left:3px}
+.btn-watch .i-play{box-shadow:none}
+.btn-watch::before{content:"";width:44px;height:44px;border-radius:50%;background:var(--blue);order:-1;margin-right:-44px;box-shadow:0 0 0 0 rgba(0,145,255,.5);animation:vppulse 2s infinite}
+.btn-watch .i-play{position:relative;left:16px;z-index:1;margin-right:18px}
+.btn-watch:hover{color:var(--blue-d)}
+@media (max-width:620px){.vp.modal{border-radius:18px}.vp-head small{display:none}}
+@media (prefers-reduced-motion:reduce){.vp{transition:none}.vp-sound,.btn-watch::before{animation:none}}
+/* "click to try" gesture */
+.try,.try-wrap{position:relative}
+.try{box-shadow:0 0 0 0 rgba(0,145,255,.6);animation:tryring 1.8s infinite}
+@keyframes tryring{0%{box-shadow:0 0 0 0 rgba(0,145,255,.55)}100%{box-shadow:0 0 0 18px rgba(0,145,255,0)}}
+.tap{position:absolute;right:-26px;bottom:-34px;z-index:6;display:flex;align-items:flex-end;gap:6px;pointer-events:none;animation:tap 1.8s ease-in-out infinite}
+.tap svg{width:40px;height:40px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.25));transform:rotate(-20deg)}
+.tap em{font-style:normal;white-space:nowrap;background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:5px 10px;border-radius:999px;margin-bottom:-6px}
+@keyframes tap{0%,100%{transform:translate(0,0)}40%{transform:translate(-8px,-8px)}50%{transform:translate(-8px,-8px) scale(.9)}60%{transform:translate(-8px,-8px)}}
+.levels-wrap .tap{right:auto;left:60%;bottom:-22px}
+.sc-tabs .tap{right:12px;bottom:auto;top:40px}
+.tap-card{right:10%;bottom:auto;top:8%;z-index:8}
+.try-wrap.used .tap,.try.used .tap{opacity:0;transition:opacity .3s}
+.try.used{animation:none}
+@media (max-width:1000px){.sc-tabs .tap{display:none}}
+@media (prefers-reduced-motion:reduce){.tap,.try{animation:none}}
+.vp.modal .vp-sound{left:20px;top:20px;transform:none}

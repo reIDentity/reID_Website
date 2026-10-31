@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="screens.css">
+<link rel="stylesheet" href="player.css">
 <script>document.documentElement.classList.remove('no-js')</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"reID","url":"https://reidentity.net","applicationCategory":"FinanceApplication","operatingSystem":"iOS, Android, Web","description":"One verified digital identity to sign in, pay, share and earn.","publisher":{"@type":"Organization","name":"reID","url":"https://reidentity.net"}}</script>
 </head>
@@ -33,14 +34,14 @@
   <div class="wrap nav-in">
     <a class="brand" href="#top" aria-label="reID home"><img src="assets/logo-mark-text.svg" alt="reID" width="107" height="32"></a>
     <nav class="links" aria-label="Main">
-      <a href="#personal">Personal</a><a href="#virtual-id">Virtual ID</a><a href="#cashback">Cashback</a><a href="#legacy">Legacy</a><a href="#chat">Chat</a><a href="#sso">Sign in</a><a href="#corporate">reCorporate</a><a href="#ambassador">Ambassador</a>
+      <a href="#personal">Personal</a><a href="#virtual-id">Virtual ID</a><a href="#cashback">Cashback</a><a href="#legacy">Legacy</a><a href="#chat">Chat</a><a href="#security">Security</a><a href="#corporate">reCorporate</a><a href="#ambassador">Ambassador</a>
     </nav>
     <a class="btn btn-blue sm nav-cta" href="https://app.reidentity.net" target="_blank" rel="noopener">Get your reID</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
   </div>
 </header>
 <nav class="menu" id="menu" aria-label="Mobile">
-  <a href="#personal">Personal</a><a href="#virtual-id">Virtual ID</a><a href="#cashback">Cashback</a><a href="#legacy">Legacy</a><a href="#chat">reID Chat</a><a href="#sso">Sign in with reID</a><a href="#corporate">reCorporate</a><a href="#ambassador">Ambassador</a><a href="#contact">Contact</a>
+  <a href="#personal">Personal</a><a href="#virtual-id">Virtual ID</a><a href="#cashback">Cashback</a><a href="#legacy">Legacy</a><a href="#chat">reID Chat</a><a href="#security">Security &amp; SSO</a><a href="#sso">Sign in with reID</a><a href="#corporate">reCorporate</a><a href="#ambassador">Ambassador</a><a href="#contact">Contact</a>
   <a class="btn btn-blue" href="https://app.reidentity.net" target="_blank" rel="noopener">Get your reID</a>
 </nav>
 
@@ -59,6 +60,7 @@
     <div class="row h-in">
       <a class="btn btn-blue magnet" href="https://app.reidentity.net" target="_blank" rel="noopener">Create your reID</a>
       <a class="btn btn-line magnet" href="#corporate">For businesses</a>
+      <button class="btn-watch" type="button" data-watch><span class="i-play"></span>Watch the 2-min explainer</button>
     </div>
     <div class="hero-meta h-in">
       <div><b data-count="1">1</b><span>identity</span></div>
@@ -68,7 +70,7 @@
   </div>
   <div class="hero-r" id="heroArt">
     <img class="paint" src="assets/img/hero-phone.webp" alt="Oil painting of a person holding a smartphone close to their chest" fetchpriority="high">
-    <div class="scan" aria-hidden="true"><div class="grid"></div><i class="c c1"></i><i class="c c2"></i><i class="c c3"></i><i class="c c4"></i><span class="beam"></span></div>
+    <div class="scan" id="heroScan" aria-hidden="true"><div class="grid"></div><i class="c c1"></i><i class="c c2"></i><i class="c c3"></i><i class="c c4"></i><span class="beam"></span><div class="scan-id"><img src="assets/img/corp-alex.webp" alt=""><span><b>alex@reid</b><small>Identity matched</small></span><svg class="ic"><use href="assets/sprite.svg#i-verified"/></svg></div></div>
     <div class="chip k1" data-depth="30"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-verified"/></svg></span><span><b>Identity verified</b>Passport + liveness</span></div>
     <div class="chip k2" data-depth="50"><span class="ib"><svg class="ic"><use href="assets/sprite.svg#i-passkey"/></svg></span><span><b>Signed in with passkey</b>No password needed</span></div>
     <div class="chip k3" data-depth="20"><span class="ib" style="background:#FFF4DB;color:#B7791F"><svg class="ic"><use href="assets/sprite.svg#i-rewards"/></svg></span><span><b>Cashback +45.00</b>From your legacy</span></div>
@@ -266,7 +268,7 @@
         </div>
         <p class="ex" style="margin-top:18px">Virtual cards and numbers are rolling out by region.</p>
       </div>
-      <div class="card-stage" id="cardStage">
+      <div class="card-stage" id="cardStage"><span class="tap tap-card" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1-6 6h-1.2a5 5 0 0 1-3.9-1.9L4 15.6a1.5 1.5 0 0 1 2.2-2L9 16" fill="#fff" stroke="#0B1220" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg><em>Move over the card</em></span>
         <div class="bigholo" id="bigHolo">
           <div class="h-row"><span class="hl">Virtual debit · reID</span><span class="nfc">)))</span></div>
           <div class="chipgold"></div>
@@ -362,7 +364,7 @@
         <h2 class="splt">Invite friends. Earn from your network, forever.</h2>
         <p class="lead">Everyone who joins with your QR becomes part of your legacy. A share of every transaction your network makes flows back to you, across unlimited levels.</p>
       </div>
-      <div class="levels" id="levels" role="group" aria-label="Network levels"></div>
+      <div class="levels-wrap try-wrap"><div class="levels" id="levels" role="group" aria-label="Network levels"></div><span class="tap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1-6 6h-1.2a5 5 0 0 1-3.9-1.9L4 15.6a1.5 1.5 0 0 1 2.2-2L9 16" fill="#fff" stroke="#0B1220" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg><em>Tap a level</em></span></div>
       <div class="lv-note" aria-live="polite"><b id="lvTitle">Level 1 · Your direct invites</b><span id="lvText">People who scan your QR and join reID.</span></div>
     </div>
     <div class="net" id="net">
@@ -470,6 +472,32 @@
   </div>
 </section>
 
+<!-- ============ SECURITY + SSO FOR YOUR ECOSYSTEM ============ -->
+<section class="sec secu" id="security">
+  <div class="wrap">
+    <div class="secu-grid">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="kicker"><span class="px"><i></i><i></i><i></i><i></i></span>Security</span>
+        <h2 class="splt">One secure sign-on for your entire ecosystem.</h2>
+        <p class="lead">reID is the single sign-on (SSO) for every app you use or run. One verified login replaces dozens of passwords, and every app gets the same bank-grade protection.</p>
+      </div>
+      <div class="sso-hub" id="ssoHub" aria-hidden="true">
+        <div class="hub-core"><img src="assets/icons/reid-corporate.svg" alt=""><small>Single sign-on</small></div>
+        <span class="hub-app a1">Shopping</span><span class="hub-app a2">Banking</span><span class="hub-app a3">Travel</span><span class="hub-app a4">Healthcare</span><span class="hub-app a5">Your business app</span><span class="hub-app a6">Government</span>
+        <svg viewBox="0 0 400 400" class="hub-lines"><g stroke="#0091FF" stroke-width="1.5" stroke-dasharray="4 6" fill="none" opacity=".5"><path d="M200 200 L60 70"/><path d="M200 200 L340 70"/><path d="M200 200 L370 210"/><path d="M200 200 L330 340"/><path d="M200 200 L70 340"/><path d="M200 200 L30 210"/></g></svg>
+      </div>
+    </div>
+    <div class="secu-cards">
+      <div><svg class="ic"><use href="assets/sprite.svg#i-passkey"/></svg><b>Passkeys and biometrics</b><p>No passwords to steal. Sign in with your face or fingerprint on your own device.</p></div>
+      <div><svg class="ic"><use href="assets/sprite.svg#i-lock"/></svg><b>Encrypted end to end</b><p>Your data is encrypted in transit and at rest, and your keys stay with you.</p></div>
+      <div><svg class="ic"><use href="assets/sprite.svg#i-eye-closed"/></svg><b>Zero-knowledge proofs</b><p>Apps learn "verified" or "over 18", never your documents.</p></div>
+      <div><svg class="ic"><use href="assets/sprite.svg#i-verified"/></svg><b>Consent for every app</b><p>You approve each piece of data shared, and can revoke access any time.</p></div>
+      <div><svg class="ic"><use href="assets/sprite.svg#i-fa-authentication"/></svg><b>Two-factor and alerts</b><p>Extra checks for payments and instant alerts for new sign-ins.</p></div>
+      <div><svg class="ic"><use href="assets/sprite.svg#i-verify-guard"/></svg><b>Regulated KYC and AML</b><p>Verification by licensed providers, with audit trails built in.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SSO ============ -->
 <section class="sec" style="padding-top:0" id="sso">
   <div class="wrap">
@@ -494,7 +522,7 @@
         <div class="site" data-step="0">
           <span class="logo-ph"><svg class="ic l"><use href="assets/sprite.svg#i-real-estate"/></svg></span>
           <h3>Harbour Homes</h3><p class="mute">Sign in to save listings and book viewings.</p>
-          <button class="siw" type="button" id="siw"><svg class="ic"><use href="assets/sprite.svg#i-identity"/></svg>Sign in with reID</button>
+          <button class="siw try" type="button" id="siw"><span class="tap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1-6 6h-1.2a5 5 0 0 1-3.9-1.9L4 15.6a1.5 1.5 0 0 1 2.2-2L9 16" fill="#fff" stroke="#0B1220" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg><em>Click to try</em></span><svg class="ic"><use href="assets/sprite.svg#i-identity"/></svg>Sign in with reID</button>
           <p class="mute" style="font-size:13px">Example partner app. Try it.</p>
         </div>
         <div class="consent" data-step="1" hidden>
@@ -594,7 +622,7 @@
       <h2 class="splt">Manage people, access and money from one workspace.</h2>
     </div>
     <div class="showcase">
-      <div class="sc-tabs" role="tablist" aria-label="reCorporate product tour">
+      <div class="sc-tabs try-wrap" role="tablist" aria-label="reCorporate product tour"><span class="tap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1-6 6h-1.2a5 5 0 0 1-3.9-1.9L4 15.6a1.5 1.5 0 0 1 2.2-2L9 16" fill="#fff" stroke="#0B1220" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg><em>Click a tab</em></span>
         <button class="sc-tab" role="tab" aria-selected="true" data-sc="0"><svg class="ic"><use href="assets/sprite.svg#i-home"/></svg>Dashboard<i class="pg"></i></button>
         <button class="sc-tab" role="tab" aria-selected="false" data-sc="1"><svg class="ic"><use href="assets/sprite.svg#i-lock"/></svg>Roles &amp; access<i class="pg"></i></button>
         <button class="sc-tab" role="tab" aria-selected="false" data-sc="2"><svg class="ic"><use href="assets/sprite.svg#i-legacy"/></svg>Legacy network<i class="pg"></i></button>
@@ -736,23 +764,13 @@
         <article class="tile ink"><svg class="icon"><use href="assets/sprite.svg#i-shop"/></svg><h3>Storefront sales</h3><p>Sell ecosystem products from your own storefront, on our subdomain or your own domain.</p></article>
       </div>
 
-      <div class="splt" style="margin-top:clamp(80px,10vw,140px);align-items:start" id="amb-steps">
+      <div class="amb-proc" style="margin-top:clamp(80px,10vw,140px)" id="amb-steps">
         <div class="sec-head amb-head" style="position:static">
           <span class="kicker"><span class="px"><i></i><i></i><i></i><i></i></span>The process</span>
           <h2 class="splt">From application to first payout.</h2>
           <p class="lead">You apply inside the reID app. Once approved, you work from a dedicated Ambassador portal in reCorporate, separate from any merchant dashboard.</p>
         </div>
-        <div class="timeline" id="timeline">
-          <div class="rail"><i id="rail"></i></div>
-          <div class="tl"><span class="dot">01</span><div><h4>Create your reID</h4><p>Download the app and verify your identity.</p></div></div>
-          <div class="tl"><span class="dot">02</span><div><h4>Apply in the app</h4><p>Submit your Ambassador application from your account.</p></div></div>
-          <div class="tl"><span class="dot">03</span><div><h4>Complete the Academy</h4><p>Learn the products, the pitch and compliance basics.</p></div></div>
-          <div class="tl"><span class="dot">04</span><div><h4>Pass the test</h4><p>A short assessment confirms you're ready.</p></div></div>
-          <div class="tl"><span class="dot">05</span><div><h4>Get approved</h4><p>Receive your login for the Ambassador portal.</p></div></div>
-          <div class="tl"><span class="dot">06</span><div><h4>Launch your storefront</h4><p>Your page goes live with your QR and tracking code.</p></div></div>
-          <div class="tl"><span class="dot">07</span><div><h4>Onboard your network</h4><p>Sign up people and businesses and track each one.</p></div></div>
-          <div class="tl"><span class="dot">08</span><div><h4>Get paid</h4><p>Commissions are tracked automatically and paid to your reID wallet.</p></div></div>
-        </div>
+        <div class="hproc" id="timeline"><div class="hp-rail"><i id="rail"></i></div><div class="hp-track"><div class="hp"><span class="hp-n">01</span><h4>Create your reID</h4><p>Download the app and verify your identity.</p></div><div class="hp"><span class="hp-n">02</span><h4>Apply in the app</h4><p>Submit your Ambassador application from your account.</p></div><div class="hp"><span class="hp-n">03</span><h4>Complete the Academy</h4><p>Learn the products, the pitch and compliance basics.</p></div><div class="hp"><span class="hp-n">04</span><h4>Pass the test</h4><p>A short assessment confirms you're ready.</p></div><div class="hp"><span class="hp-n">05</span><h4>Get approved</h4><p>Receive your login for the Ambassador portal.</p></div><div class="hp"><span class="hp-n">06</span><h4>Launch your storefront</h4><p>Your page goes live with your QR and tracking code.</p></div><div class="hp"><span class="hp-n">07</span><h4>Onboard your network</h4><p>Sign up people and businesses and track each one.</p></div><div class="hp"><span class="hp-n">08</span><h4>Get paid</h4><p>Commissions are tracked automatically and paid to your reID wallet.</p></div></div></div>
       </div>
 
       <div class="apply" style="margin-top:clamp(64px,8vw,110px)">
@@ -880,11 +898,34 @@
     <div class="fine"><span>© <span id="yr">2026</span> reidentity.net · reID</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="cookies.html">Cookies</a></span></div>
   </div>
 </footer>
+
+<!-- Explainer video: pop-up on first visit, mini player on scroll -->
+<div class="vp-backdrop" id="vpBack" hidden></div>
+<div class="vp" id="vp" hidden role="dialog" aria-label="reID explainer video">
+  <div class="vp-frame">
+    <video id="vpVideo" playsinline preload="metadata" poster="assets/video/reid-explainer-poster.jpg">
+      <source src="assets/video/reid-explainer.mp4" type="video/mp4">
+    </video>
+    <button class="vp-sound" id="vpSound" type="button"><span class="i-vol" style="color:var(--blue)"></span>Tap for sound</button>
+    <div class="vp-bar">
+      <button type="button" id="vpPlay" aria-label="Pause"><span class="i-pause"></span></button>
+      <div class="vp-track" id="vpTrack"><i id="vpFill"></i><div class="vp-marks" id="vpMarks"></div></div>
+      <span class="vp-time" id="vpTime">0:00</span>
+      <button type="button" id="vpMute" aria-label="Unmute"><span class="i-vol off"></span></button>
+      <button type="button" id="vpExpand" aria-label="Full view"><span class="i-exp"></span></button>
+      <button type="button" id="vpClose" aria-label="Close video"><span class="i-x"></span></button>
+    </div>
+  </div>
+  <div class="vp-head"><span><b>What is reID?</b><small>2-minute walkthrough · individuals, freelancers, businesses, earning</small></span></div>
+  <div class="vp-ch" id="vpCh"></div>
+</div>
+<button class="vp-reopen" id="vpReopen" type="button" hidden><span class="i-play"></span>Watch: what is reID?</button>
 <div class="toast" id="toast" role="status"></div>
 
 <script src="assets/vendor/gsap.min.js"></script>
 <script src="assets/vendor/ScrollTrigger.min.js"></script>
 <script src="assets/vendor/lenis.min.js"></script>
 <script src="app.js"></script>
+<script src="player.js"></script>
 </body>
 </html>
